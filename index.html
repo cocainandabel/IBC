@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web3 Twitter Intelligence Platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Client Growth Intelligence</p>
+          <h1>Web3 Twitter Intelligence Platform</h1>
+          <p class="subhead">
+            Analyze performance before and after KOL posts with market, social,
+            and ROI indicators.
+          </p>
+        </div>
+      </header>
+
+      <section class="panel controls">
+        <div class="control">
+          <label for="projectSelect">Client project</label>
+          <select id="projectSelect"></select>
+        </div>
+        <div class="control">
+          <label for="campaignSelect">KOL post</label>
+          <select id="campaignSelect"></select>
+        </div>
+      </section>
+
+      <section class="kpi-grid">
+        <article class="panel kpi-card">
+          <h3>Token Price (CMC)</h3>
+          <p class="kpi-value" id="tokenPriceValue">-</p>
+          <p class="kpi-meta" id="tokenPriceChange">-</p>
+        </article>
+        <article class="panel kpi-card">
+          <h3>Twitter Followers</h3>
+          <p class="kpi-value" id="followersValue">-</p>
+          <p class="kpi-meta" id="followersChange">-</p>
+        </article>
+        <article class="panel kpi-card">
+          <h3>Engagement Rate</h3>
+          <p class="kpi-value" id="engagementValue">-</p>
+          <p class="kpi-meta" id="engagementChange">-</p>
+        </article>
+        <article class="panel kpi-card">
+          <h3>Campaign ROI</h3>
+          <p class="kpi-value" id="roiValue">-</p>
+          <p class="kpi-meta" id="roiMeta">-</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title-row">
+          <h2>Before vs After KOL Post</h2>
+          <p class="muted" id="eventDateLabel"></p>
+        </div>
+        <div id="comparisonChart" class="chart"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Token Price + Followers Timeline</h2>
+        <div id="timelineChart" class="chart"></div>
+      </section>
+
+      <section class="two-col">
+        <article class="panel">
+          <h2>Top Posts (Before)</h2>
+          <div id="topPostsBefore"></div>
+        </article>
+        <article class="panel">
+          <h2>Top Posts (After)</h2>
+          <div id="topPostsAfter"></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>ROI Breakdown</h2>
+        <div id="roiBreakdown"></div>
+      </section>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
