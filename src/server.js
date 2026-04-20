@@ -28,14 +28,14 @@ app.get("/api", (_req, res) => {
 });
 
 app.use((err, _req, res, _next) => {
-  const message = err?.message || "Internal server error";
-  const statusCode =
-    message.includes("DATABASE_URL") || message.includes("connect")
-      ? 503
-      : 500;
+  const message = err?.message || String(err || "Internal server error");
+  const code = err?.code;
+  const dbLikeMessage = /(database|postgres|connect|relation .* does not exist|ECONNREFUSED)/i.test(message);
+  const dbLikeCode = new Set(["ECONNREFUSED", "ENOTFOUND", "28P01", "3D000", "42P01"]).has(code);
+  const statusCode = dbLikeMessage || dbLikeCode ? 503 : 500;
 
   res.status(statusCode).json({
-    error: message
+    error: statusCode === 500 ? "Internal server error" : message
   });
 });
 
