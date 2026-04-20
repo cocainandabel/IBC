@@ -1,4 +1,4 @@
-const projects = [
+const seededProjects = [
   {
     id: "nebula-chain",
     name: "Nebula Chain",
@@ -226,8 +226,10 @@ const projects = [
   }
 ];
 
+const API_BASE = "/api";
 const projectSelect = document.getElementById("projectSelect");
 const campaignSelect = document.getElementById("campaignSelect");
+let projects = [];
 
 const fmtUsd = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -302,14 +304,14 @@ function topPosts(posts, count = 3) {
 function calculateCampaignStats(campaign) {
   const data = getBeforeAfterCampaignData(campaign);
 
-  const startFollowers = data.beforeTimeline.at(-1)?.followers ?? campaign.timeline[0].followers;
-  const endFollowers = data.afterTimeline.at(-1)?.followers ?? campaign.timeline.at(-1).followers;
+  const startFollowers = data.beforeTimeline.at(-1)?.followers ?? campaign.timeline[0]?.followers ?? 0;
+  const endFollowers = data.afterTimeline.at(-1)?.followers ?? campaign.timeline.at(-1)?.followers ?? 0;
   const followerChange = endFollowers - startFollowers;
-  const followerChangePct = (followerChange / startFollowers) * 100;
+  const followerChangePct = startFollowers === 0 ? 0 : (followerChange / startFollowers) * 100;
 
-  const startPrice = data.beforeTimeline.at(-1)?.price ?? campaign.timeline[0].price;
-  const endPrice = data.afterTimeline.at(-1)?.price ?? campaign.timeline.at(-1).price;
-  const tokenChangePct = ((endPrice - startPrice) / startPrice) * 100;
+  const startPrice = data.beforeTimeline.at(-1)?.price ?? campaign.timeline[0]?.price ?? 0;
+  const endPrice = Number(campaign.livePrice ?? data.afterTimeline.at(-1)?.price ?? campaign.timeline.at(-1)?.price ?? 0);
+  const tokenChangePct = startPrice === 0 ? 0 : ((endPrice - startPrice) / startPrice) * 100;
 
   const beforeEngagementRate = engagementRate(data.beforePosts);
   const afterEngagementRate = engagementRate(data.afterPosts);
@@ -636,6 +638,97 @@ campaignSelect.addEventListener("change", (event) => {
   render(projectSelect.value, event.target.value);
 });
 
-seedProjectSelect();
-seedCampaignSelect(projectSelect.value || projects[0].id);
-render(projectSelect.value || projects[0].id, campaignSelect.value);
+async function fetchJson(path) {
+  const response = await fetch(`${API_BASE}${path}`);
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status}`);
+  }
+  return response.json();
+}
+
+function mapApiProject(project) {
+  return {
+    id: String(project.id),
+    name: project.name,
+    tokenSymbol: project.tokenSymbol,
+    campaigns: (project.campaigns || []).map((campaign) => ({
+      id: String(campaign.id),
+      slug: campaign.slug,
+      kolHandle: campaign.kolHandle,
+      postDate: campaign.postDate,
+      postUrl: campaign.postUrl,
+      costUsd: campaign.costUsd ?? 0,
+      tokensAllocated: campaign.tokensAllocated ?? 0,
+      timeline: [],
+      posts: []
+    }))
+  };
+}
+
+function mapApiAnalyticsPayload(payload) {
+  return {
+    id: String(payload.campaign.id),
+    slug: payload.campaign.slug,
+    kolHandle: payload.campaign.kolHandle,
+    postDate: payload.campaign.postDate,
+    postUrl: payload.campaign.postUrl,
+    costUsd: payload.campaign.costUsd,
+    tokensAllocated: payload.campaign.tokensAllocated,
+    livePrice: payload.campaign.livePrice,
+    timeline: payload.campaign.timeline || [],
+    posts: payload.campaign.posts || []
+  };
+}
+
+async function loadProjectsFromApi() {
+  const apiProjects = await fetchJson("/projects");
+  const mapped = apiProjects.map(mapApiProject).filter((project) => project.campaigns.length > 0);
+
+  await Promise.all(
+    mapped.map(async (project) => {
+      const hydratedCampaigns = await Promise.all(
+        project.campaigns.map(async (campaign) => {
+          const payload = await fetchJson(`/projects/${project.id}/campaigns/${campaign.id}/analytics`);
+          return mapApiAnalyticsPayload(payload);
+        })
+      );
+      project.campaigns = hydratedCampaigns;
+    })
+  );
+
+  return mapped;
+}
+
+function showBanner(message, type = "muted") {
+  const header = document.querySelector(".app-header");
+  const existing = document.getElementById("statusBanner");
+  if (existing) {
+    existing.remove();
+  }
+  const banner = document.createElement("p");
+  banner.id = "statusBanner";
+  banner.className = `subhead ${type === "error" ? "neg" : ""}`;
+  banner.textContent = message;
+  header.appendChild(banner);
+}
+
+async function boot() {
+  try {
+    projects = await loadProjectsFromApi();
+    showBanner("Connected to backend API data.");
+  } catch (error) {
+    projects = seededProjects;
+    showBanner("Using seeded demo data. Start backend + database for live analytics.", "error");
+  }
+
+  if (projects.length === 0) {
+    showBanner("No projects available.", "error");
+    return;
+  }
+
+  seedProjectSelect();
+  seedCampaignSelect(projectSelect.value || projects[0].id);
+  render(projectSelect.value || projects[0].id, campaignSelect.value);
+}
+
+boot();

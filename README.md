@@ -1,59 +1,98 @@
 # Web3 Twitter Intelligence Platform
 
-A lightweight platform to analyze Twitter performance for Web3 clients, focused on **before vs after KOL post impact**.
+Production-ready foundation for analyzing Web3 client Twitter/X accounts around KOL posts.
 
-## What this MVP includes
+## Features
 
-- Client and campaign selector (project + KOL post)
-- Comparison graph for pre/post metrics:
-  - Followers
-  - Engagement rate
-  - Average engagement per post
-  - Token price
-- Timeline graph around KOL post:
-  - Token price trend (CoinMarketCap-style indicator)
-  - Twitter follower trend
-- KPI cards:
-  - Current token price and % change
-  - Current followers and growth
-  - Engagement rate and delta
-  - ROI
-- Top posts tables:
-  - Top pre-KOL posts
-  - Top post-KOL posts
-- ROI breakdown:
-  - Campaign spend
-  - Token return value
-  - Net value
-  - Cost per new follower
-  - Cost per engagement
+- Before vs after KOL comparison graph
+- Indicators:
+  - CoinMarketCap token price movement
+  - Twitter follower growth
+  - Engagement rate delta
+  - Top posts (before/after)
+  - ROI calculation and breakdown
+- Timeline chart with KOL post marker
 
-## Data currently used
+## Stack
 
-The dashboard currently ships with seeded demo data (`app.js`) for multiple Web3 projects and campaigns.
+- Frontend: HTML/CSS/Vanilla JS
+- Backend: Node.js + Express
+- Database: PostgreSQL
+- External market data: CoinMarketCap API
 
-To connect real data:
+## Project structure
 
-- Replace the seeded `projects` object with API responses from:
-  - CoinMarketCap API (token price history)
-  - X/Twitter API (followers, tweet metrics, post details)
-- Keep the same shape used by the rendering functions:
-  - `campaign.timeline` for date/price/follower points
-  - `campaign.posts` for tweet-level engagement
+- `index.html`, `style.css`, `app.js` - dashboard UI
+- `src/server.js` - API server
+- `src/routes/*` - API routes
+- `src/services/*` - analytics and CoinMarketCap integration
+- `src/lib/db.js` - PostgreSQL pool + helpers
+- `db/migrations/001_init.sql` - schema
+- `db/seeds/001_seed.sql` - initial seed data
+- `src/scripts/*` - migration, seed, CMC sync scripts
 
-## Run locally
+## 1) Environment setup
 
-Because this is a static frontend, you can run it with any simple web server:
+Copy the environment example:
 
 ```bash
-python -m http.server 8080
+cp .env.example .env
 ```
 
-Then open:
+Required variables:
 
-`http://localhost:8080`
+- `PORT` (default `8080`)
+- `DATABASE_URL` (PostgreSQL connection string)
+- `CMC_API_KEY` (for live CoinMarketCap sync)
+- `CMC_BASE_URL` (default `https://pro-api.coinmarketcap.com`)
 
-## ROI formula used
+## 2) Install dependencies
+
+```bash
+npm install
+```
+
+## 3) Prepare database
+
+Run migrations and seed:
+
+```bash
+npm run db:migrate
+npm run db:seed
+```
+
+## 4) Start the platform
+
+```bash
+npm run start
+```
+
+Open `http://localhost:8080`.
+
+For development with auto-reload:
+
+```bash
+npm run dev
+```
+
+## 5) Sync live CoinMarketCap prices
+
+```bash
+npm run sync:cmc
+```
+
+This updates latest token prices for all projects in the database and stores them in `price_snapshots`.
+
+## API overview
+
+- `GET /api/health`
+- `GET /api/projects`
+- `GET /api/projects/:projectId/campaigns`
+- `GET /api/projects/:projectId/campaigns/:campaignId/analytics`
+
+The frontend consumes these APIs and falls back to local seeded demo data if the API is unavailable.
+
+## ROI formula
 
 ```txt
 ROI % = ((token_return_value - campaign_spend) / campaign_spend) * 100
@@ -61,4 +100,20 @@ ROI % = ((token_return_value - campaign_spend) / campaign_spend) * 100
 
 Where:
 
-- `token_return_value = (price_after - price_before) * tokens_allocated_to_campaign`
+```txt
+token_return_value = (price_after - price_before) * tokens_allocated_to_campaign
+```
+
+## Deploy
+
+### Vercel
+
+- `vercel.json` is included to serve static frontend files.
+- For full backend + database runtime, deploy API/server on a Node host (Render/Fly/Railway) and point frontend API base URL to that host.
+
+### Suggested production topology
+
+- Frontend: Vercel/Netlify
+- API: Render/Fly/Railway
+- Database: managed PostgreSQL (Neon/Supabase/RDS)
+
