@@ -83,6 +83,21 @@ npm run sync:cmc
 
 This updates latest token prices for all projects in the database and stores them in `price_snapshots`.
 
+## 6) Run automated CoinMarketCap worker
+
+For continuous syncing (scheduler/worker mode), run:
+
+```bash
+npm run worker:cmc
+```
+
+Worker environment variables:
+
+- `CMC_SYNC_INTERVAL_MINUTES` (default `60`)
+- `CMC_WORKER_RUN_ON_START` (default `true`)
+
+The worker has overlap protection (won't run a new cycle if a previous cycle is still running) and supports graceful shutdown on `SIGINT`/`SIGTERM`.
+
 ## API overview
 
 - `GET /api/health`
