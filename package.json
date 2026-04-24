@@ -1,0 +1,34 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "A lightweight platform to analyze Twitter performance for Web3 clients, focused on **before vs after KOL post impact**.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:migrate": "node src/scripts/migrate.js",
+    "db:seed": "node src/scripts/seed.js",
+    "sync:cmc": "node src/scripts/syncCmc.js",
+    "worker:cmc": "node src/scripts/cmcWorker.js",
+    "check": "node --check src/server.js && node --check app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocainandabel/IBC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cocainandabel/IBC/issues"
+  },
+  "homepage": "https://github.com/cocainandabel/IBC#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
