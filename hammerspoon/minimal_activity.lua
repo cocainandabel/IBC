@@ -18,6 +18,7 @@ local CONFIG = {
     idleSafety = 240,     -- force action before 5 min idle
     userYieldSec = 6,
     syntheticGuardSec = 0.25,
+    logEverySec = 30,
 }
 
 -------------------------------------------------
@@ -31,9 +32,20 @@ local state = {
     lastKey = now(),
     lastMouse = now(),
     lastAction = now(),
+    lastLog = 0,
     userQuietUntil = 0,
     syntheticUntil = 0,
 }
+
+local function log(msg, ...)
+    hs.printf("[minimal_activity] " .. msg, ...)
+end
+
+if not hs.accessibilityState(true) then
+    hs.alert.show("Hammerspoon Accessibility permission is required", 3)
+    log("accessibility is disabled; enable it and restart Hammerspoon")
+    return { error = "accessibility_disabled" }
+end
 
 -------------------------------------------------
 -- APP BLOCKLIST (NO KEYS HERE)
@@ -100,20 +112,38 @@ local function doKey()
         return false
     end
     markSynthetic()
-    hs.eventtap.keyStroke({}, "right", 50000)
+    local ok, err = pcall(function()
+        hs.eventtap.keyStroke({}, "right", 50000)
+    end)
+    if not ok then
+        log("doKey error: %s", tostring(err))
+        return false
+    end
     return true
 end
 
 local function doMouse()
     local pos = hs.mouse.absolutePosition()
     markSynthetic()
-    hs.mouse.absolutePosition({ x = pos.x + 1, y = pos.y })
+    local ok, err = pcall(function()
+        hs.mouse.absolutePosition({ x = pos.x + 1, y = pos.y })
+    end)
+    if not ok then
+        log("doMouse error: %s", tostring(err))
+        return false
+    end
     return true
 end
 
 local function doScroll()
     markSynthetic()
-    hs.eventtap.scrollWheel({ 0, 1 }, {}, "line")
+    local ok, err = pcall(function()
+        hs.eventtap.scrollWheel({ 0, 1 }, {}, "line")
+    end)
+    if not ok then
+        log("doScroll error: %s", tostring(err))
+        return false
+    end
     return true
 end
 
@@ -152,9 +182,20 @@ local mainTimer = hs.timer.new(1, function()
             state.lastAction = t
         end
     end
+
+    if t - state.lastLog >= CONFIG.logEverySec then
+        state.lastLog = t
+        log(
+            "running: idle=%.2fs secureInput=%s frontBundle=%s",
+            hs.host.idleTime(),
+            tostring(hs.eventtap.isSecureInputEnabled()),
+            tostring(frontAppBundle())
+        )
+    end
 end, true):start()
 
 hs.alert.show("Minimal Activity Script Loaded", 1)
+log("loaded: secureInput=%s", tostring(hs.eventtap.isSecureInputEnabled()))
 
 return {
     activityTap = activityTap,
