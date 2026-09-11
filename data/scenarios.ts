@@ -163,7 +163,7 @@ export const micrositeData = {
     band:
       "All three scenarios run on the same machine: trusted partners, a native incentive, on-site verification, and content that outlives the event.",
     contactName: "Alpay Aktug",
-    contactEmail: "alpay.aktug@example.com",
+    contactEmail: "aktuh14@gmail.com",
   },
 };
 
