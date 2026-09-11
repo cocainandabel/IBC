@@ -10,18 +10,31 @@ type PartnerCardProps = {
 };
 
 export function PartnerCard({ partner, media }: PartnerCardProps) {
+  const hasVideoContent =
+    media.latestVideos.length > 0 || Boolean(media.featuredVideoId) || Boolean(partner.youtube);
+
   return (
     <article className="group rounded-2xl border border-binance-border bg-binance-slate p-5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover">
-      <div className="flex items-start gap-3">
+      {partner.imageUrl ? (
         <img
-          src={media.avatarUrl}
-          alt={`${partner.name} avatar`}
-          className="h-14 w-14 rounded-full border border-binance-border object-cover"
+          src={partner.imageUrl}
+          alt={`${partner.name} visual`}
+          className="mb-4 aspect-[16/9] w-full rounded-xl border border-binance-border object-cover"
           loading="lazy"
-          onError={(event) => {
-            event.currentTarget.src = "/partners/placeholder.svg";
-          }}
         />
+      ) : null}
+      <div className="flex items-start gap-3">
+        {partner.imageUrl ? null : (
+          <img
+            src={media.avatarUrl}
+            alt={`${partner.name} avatar`}
+            className="h-14 w-14 rounded-full border border-binance-border object-cover"
+            loading="lazy"
+            onError={(event) => {
+              event.currentTarget.src = "/partners/placeholder.svg";
+            }}
+          />
+        )}
         <div>
           <h5 className="font-display text-lg text-binance-text">{partner.name}</h5>
           <p className="text-sm text-binance-muted">{partner.role}</p>
@@ -40,15 +53,23 @@ export function PartnerCard({ partner, media }: PartnerCardProps) {
         ))}
       </div>
 
-      <div className="mt-4">
-        <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">Latest content</p>
-        <VideoStrip videos={media.latestVideos.slice(0, 3)} />
-      </div>
+      {hasVideoContent ? (
+        <>
+          <div className="mt-4">
+            <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">
+              Latest content
+            </p>
+            <VideoStrip videos={media.latestVideos.slice(0, 3)} />
+          </div>
 
-      <div className="mt-4">
-        <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">Featured video</p>
-        <LiteYouTube videoId={media.featuredVideoId} title={partner.name} />
-      </div>
+          <div className="mt-4">
+            <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">
+              Featured video
+            </p>
+            <LiteYouTube videoId={media.featuredVideoId} title={partner.name} />
+          </div>
+        </>
+      ) : null}
 
       {partner.links.length > 0 ? (
         <div className="mt-4 flex flex-wrap gap-2">

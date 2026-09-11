@@ -16,6 +16,7 @@ export type Partner = {
   role: string;
   audience: string;
   why: string;
+  imageUrl?: string;
   links: PartnerLink[];
   reach: ReachPill[];
   youtube?: {
@@ -438,47 +439,6 @@ export const scenarios: Scenario[] = [
           recentVideoIds: [], // TODO: paste video IDs
         },
       },
-      {
-        slug: "now-spor",
-        name: "NOW Spor",
-        role: "Broadcast partner carrying Karakullukcu and Ozcan",
-        audience: "Broad football broadcast viewers",
-        why: "Gives campaign consistency between digital channels and broadcast touchpoints.",
-        links: [],
-        reach: [
-          { label: "Role", value: "Broadcast partner" },
-          { label: "Coverage", value: "Karakullukcu, Ozcan" },
-          { label: "Format", value: "Studio and live shows" },
-        ],
-      },
-      {
-        slug: "sports-digitale",
-        name: "Sports Digitale",
-        role: "Digital sports media house, alternative production partner",
-        audience: "Football native social audience",
-        why: "Additional production capacity for recurring match-day content.",
-        links: [],
-        reach: [
-          { label: "Role", value: "Media house" },
-          { label: "Use case", value: "Production partner" },
-          { label: "Format", value: "Digital sports programming" },
-        ],
-      },
-      {
-        slug: "trendyol",
-        name: "Trendyol",
-        role: "Super Lig title sponsor and co-campaign partner",
-        audience: "Mass-market ecommerce and football audience",
-        why: "Strong incentive bridge between football culture and verified onboarding.",
-        links: [
-          { label: "Corporate", url: "https://www.trendyol.com/s/kurumsal" },
-        ],
-        reach: [
-          { label: "Role", value: "Super Lig title sponsor" },
-          { label: "National teams", value: "Partner" },
-          { label: "Man City", value: "Deal signed Aug 2026" },
-        ],
-      },
     ],
     complianceNote:
       "Compliance note: scripts approved per episode, no return promises or trading calls on air, draws reward verified registration only, SPK and MASAK guidance reviewed before launch.",
@@ -495,7 +455,10 @@ export const scenarios: Scenario[] = [
         "Devconnect Istanbul 2023 drew the global Ethereum ecosystem for a week, zkDay Istanbul alone had 1,277 attendees. If it returns, it is the biggest week for Binance to own in Turkey.",
       links: [
         { label: "Devconnect", url: "https://devconnect.org" },
-        { label: "Ciragan Palace", url: "https://www.kempinski.com/en/ciragan-palace" },
+        {
+          label: "Ciragan Palace",
+          url: "https://www.kempinski.com/en/ciragan-palace/overview/offers/suite-indulgence-offer?source=S46992213&utm_source=google&utm_medium=cpc&utm_source_platform=google_ads&utm_campaign=KEMPINSKI_KIIST_SEA_PER_BRA_TR_EN_AON&utm_campaignid=24166881025&utm_adgroup=BRA_TR_EN_KWS_Exact&gad_source=1&gad_campaignid=24166881025&gbraid=0AAAAAosvjVfKP56q0dlz1J8sHaYE1psUh&gclid=Cj0KCQjwzY7VBhDwARIsAFtPvBRdQITBuLhH7eAocfi6hRbjLA68KvWhSO7O00rd-ocLWIyrCQWPuKkaAl77EALw_wcB",
+        },
       ],
     },
     formatSteps: [
@@ -539,6 +502,7 @@ export const scenarios: Scenario[] = [
         role: "Ethereum ecosystem flagship week",
         audience: "Global builders, founders, community leaders",
         why: "High concentration of crypto-native influence, strongest strategic week for thought leadership in Turkey.",
+        imageUrl: "/partners/devconnect-istanbul.png",
         links: [{ label: "Website", url: "https://devconnect.org" }],
         reach: [
           { label: "Signal", value: "Global Ethereum audience" },
@@ -553,61 +517,16 @@ export const scenarios: Scenario[] = [
         audience: "Invite-only leadership and community guest list",
         why: "Creates a high-prestige anchor event with strong content outcomes and partner hospitality value.",
         links: [
-          { label: "Venue", url: "https://www.kempinski.com/en/ciragan-palace" },
+          {
+            label: "Venue",
+            url: "https://www.kempinski.com/en/ciragan-palace/overview/offers/suite-indulgence-offer?source=S46992213&utm_source=google&utm_medium=cpc&utm_source_platform=google_ads&utm_campaign=KEMPINSKI_KIIST_SEA_PER_BRA_TR_EN_AON&utm_campaignid=24166881025&utm_adgroup=BRA_TR_EN_KWS_Exact&gad_source=1&gad_campaignid=24166881025&gbraid=0AAAAAosvjVfKP56q0dlz1J8sHaYE1psUh&gclid=Cj0KCQjwzY7VBhDwARIsAFtPvBRdQITBuLhH7eAocfi6hRbjLA68KvWhSO7O00rd-ocLWIyrCQWPuKkaAl77EALw_wcB",
+          },
         ],
         reach: [
           { label: "Guest capacity", value: "600 to 800" },
           { label: "Format", value: "Invite-only premium night" },
           { label: "Outcome", value: "Content and relationship depth" },
         ],
-      },
-      {
-        slug: "elraenn",
-        name: "Elraenn (Tugkan Gonultas)",
-        role: "Gaming creator crossover guest",
-        audience: "Male 16 to 30",
-        why: "Pulls youth audience attention into an otherwise crypto-native week.",
-        links: [
-          { label: "YouTube", url: "https://www.youtube.com/@Elraenn" },
-          { label: "Kick", url: "https://kick.com/elraenn" },
-          { label: "X", url: "https://x.com/elraenn" },
-        ],
-        reach: [
-          { label: "YouTube", value: "3.86M" },
-          { label: "Kick", value: "1.1M" },
-          { label: "X", value: "177K" },
-        ],
-        youtube: {
-          handle: "@Elraenn",
-          channelUrl: "https://www.youtube.com/@Elraenn",
-          subscribers: "3.86M",
-          featuredVideoIds: [], // TODO: paste video IDs
-          recentVideoIds: [], // TODO: paste video IDs
-        },
-      },
-      {
-        slug: "htalks",
-        name: "HTalks (Hasan Arda Kasikci)",
-        role: "Sports creator crossover guest",
-        audience: "Young Super Lig fan base",
-        why: "Expands Devconnect week distribution to mainstream sports-native audiences.",
-        links: [
-          { label: "YouTube", url: "https://www.youtube.com/@HTalksYoutube" },
-          { label: "X Moments", url: "https://x.com/HTalksMoments" },
-          { label: "Founder X", url: "https://x.com/hakasikci" },
-        ],
-        reach: [
-          { label: "YouTube", value: "779K" },
-          { label: "X Moments", value: "226K" },
-          { label: "Founder X", value: "212K" },
-        ],
-        youtube: {
-          handle: "@HTalksYoutube",
-          channelUrl: "https://www.youtube.com/@HTalksYoutube",
-          subscribers: "779K",
-          featuredVideoIds: [], // TODO: paste video IDs
-          recentVideoIds: [], // TODO: paste video IDs
-        },
       },
     ],
     complianceNote:
