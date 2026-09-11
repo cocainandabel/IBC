@@ -2,7 +2,6 @@
 
 import { BudgetChart } from "@/components/BudgetChart";
 import { ExternalLink } from "@/components/ExternalLink";
-import { KpiCards } from "@/components/KpiCards";
 import { PartnerCard } from "@/components/PartnerCard";
 import type { Scenario } from "@/data/scenarios";
 import type { ResolvedPartnerMedia } from "@/lib/partnerMedia";
@@ -76,7 +75,6 @@ export function ScenarioSection({ scenario, partnerMedia }: ScenarioSectionProps
       ) : null}
 
       <BudgetChart scenario={scenario} />
-      <KpiCards scenario={scenario} />
 
       <section>
         <h4 className="mb-4 font-display text-lg text-binance-text">Partners</h4>
