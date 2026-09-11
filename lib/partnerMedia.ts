@@ -1,5 +1,5 @@
 import generatedMediaJson from "@/data/partners.generated.json";
-import type { Partner } from "@/data/scenarios";
+import { partnerVideos, thumb, type Partner } from "@/data/scenarios";
 
 export type ResolvedVideo = {
   id: string;
@@ -41,7 +41,7 @@ async function buildVideosFromIds(ids: string[]): Promise<ResolvedVideo[]> {
             id,
             title: payload.title ?? `Video ${idx + 1}`,
             url: videoUrl,
-            thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+            thumbnailUrl: thumb(id),
           };
         }
       } catch {
@@ -51,7 +51,7 @@ async function buildVideosFromIds(ids: string[]): Promise<ResolvedVideo[]> {
         id,
         title: `Video ${idx + 1}`,
         url: videoUrl,
-        thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+        thumbnailUrl: thumb(id),
       };
     }),
   );
@@ -153,12 +153,21 @@ async function resolveLatestVideos(
 
 export async function resolvePartnerMedia(partner: Partner): Promise<ResolvedPartnerMedia> {
   const localGenerated = generatedMedia[partner.slug];
+  const mappedVideos = partnerVideos[partner.slug];
 
   if (!partner.youtube) {
+    const recentIds =
+      mappedVideos?.recent.slice(0, 3) ??
+      localGenerated?.recentVideoIds?.slice(0, 3) ??
+      [];
+    const featuredVideoId = mappedVideos?.featured ?? localGenerated?.featuredVideoId;
     return {
       avatarUrl: localGenerated?.avatarUrl ?? fallbackAvatar(partner.slug),
-      featuredVideoId: localGenerated?.featuredVideoId,
-      latestVideos: localGenerated?.recentVideos ?? [],
+      featuredVideoId,
+      latestVideos:
+        localGenerated?.recentVideos && localGenerated.recentVideos.length > 0
+          ? localGenerated.recentVideos
+          : await buildVideosFromIds(recentIds),
     };
   }
 
@@ -181,10 +190,12 @@ export async function resolvePartnerMedia(partner: Partner): Promise<ResolvedPar
   }
 
   const fallbackRecentIds =
-    partner.youtube.recentVideoIds.length > 0
-      ? partner.youtube.recentVideoIds
-      : (localGenerated?.recentVideoIds ?? []);
+    mappedVideos?.recent.slice(0, 3) ??
+    (partner.youtube.recentVideoIds.length > 0
+      ? partner.youtube.recentVideoIds.slice(0, 3)
+      : localGenerated?.recentVideoIds ?? []);
   const fallbackFeatured =
+    mappedVideos?.featured ??
     partner.youtube.featuredVideoIds[0] ??
     localGenerated?.featuredVideoId ??
     fallbackRecentIds[0];

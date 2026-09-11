@@ -45,12 +45,10 @@ export function PartnerCard({ partner, media }: PartnerCardProps) {
         <VideoStrip videos={media.latestVideos.slice(0, 3)} />
       </div>
 
-      {partner.youtube ? (
-        <div className="mt-4">
-          <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">Featured video</p>
-          <LiteYouTube videoId={media.featuredVideoId} title={partner.name} />
-        </div>
-      ) : null}
+      <div className="mt-4">
+        <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">Featured video</p>
+        <LiteYouTube videoId={media.featuredVideoId} title={partner.name} />
+      </div>
 
       {partner.links.length > 0 ? (
         <div className="mt-4 flex flex-wrap gap-2">
