@@ -1,134 +1,113 @@
-# Web3 Twitter Intelligence Platform
+# Binance Turkey Event Scenarios Microsite
 
-Production-ready foundation for analyzing Web3 client Twitter/X accounts around KOL posts.
-
-## Features
-
-- Before vs after KOL comparison graph
-- Indicators:
-  - CoinMarketCap token price movement
-  - Twitter follower growth
-  - Engagement rate delta
-  - Top posts (before/after)
-  - ROI calculation and breakdown
-- Timeline chart with KOL post marker
+Production-grade single-page microsite built for pitching three event activation routes for Binance Turkey.
 
 ## Stack
 
-- Frontend: HTML/CSS/Vanilla JS
-- Backend: Node.js + Express
-- Database: PostgreSQL
-- External market data: CoinMarketCap API
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Recharts
 
-## Project structure
-
-- `index.html`, `style.css`, `app.js` - dashboard UI
-- `src/server.js` - API server
-- `src/routes/*` - API routes
-- `src/services/*` - analytics and CoinMarketCap integration
-- `src/lib/db.js` - PostgreSQL pool + helpers
-- `db/migrations/001_init.sql` - schema
-- `db/seeds/001_seed.sql` - initial seed data
-- `src/scripts/*` - migration, seed, CMC sync scripts
-
-## 1) Environment setup
-
-Copy the environment example:
-
-```bash
-cp .env.example .env
-```
-
-Required variables:
-
-- `PORT` (default `8080`)
-- `DATABASE_URL` (PostgreSQL connection string)
-- `CMC_API_KEY` (for live CoinMarketCap sync)
-- `CMC_BASE_URL` (default `https://pro-api.coinmarketcap.com`)
-
-## 2) Install dependencies
+## Run locally
 
 ```bash
 npm install
-```
-
-## 3) Prepare database
-
-Run migrations and seed:
-
-```bash
-npm run db:migrate
-npm run db:seed
-```
-
-## 4) Start the platform
-
-```bash
-npm run start
-```
-
-Open `http://localhost:8080`.
-
-For development with auto-reload:
-
-```bash
 npm run dev
 ```
 
-## 5) Sync live CoinMarketCap prices
+Open `http://localhost:3000`.
+
+## Production build
 
 ```bash
-npm run sync:cmc
+npm run build
+npm run start
 ```
 
-This updates latest token prices for all projects in the database and stores them in `price_snapshots`.
+The project is deployable to Vercel with zero config.
 
-## 6) Run automated CoinMarketCap worker
+## Project structure
 
-For continuous syncing (scheduler/worker mode), run:
+- `app/page.tsx`: page composition
+- `data/scenarios.ts`: all copy, numbers and scenario content
+- `components/*`: small UI blocks
+- `lib/partnerMedia.ts`: YouTube and fallback media resolver
+- `scripts/fetch-partners.ts`: partner media generation script
+
+## YouTube API key setup
+
+Create `.env.local`:
 
 ```bash
-npm run worker:cmc
+YOUTUBE_API_KEY=your_key_here
 ```
 
-Worker environment variables:
+If this key exists, partner cards fetch latest channel media at build/render time.
 
-- `CMC_SYNC_INTERVAL_MINUTES` (default `60`)
-- `CMC_WORKER_RUN_ON_START` (default `true`)
+## Generate static partner media
 
-The worker has overlap protection (won't run a new cycle if a previous cycle is still running) and supports graceful shutdown on `SIGINT`/`SIGTERM`.
+To make the site fully static after one data pull:
 
-## API overview
-
-- `GET /api/health`
-- `GET /api/projects`
-- `GET /api/projects/:projectId/campaigns`
-- `GET /api/projects/:projectId/campaigns/:campaignId/analytics`
-
-The frontend consumes these APIs and falls back to local seeded demo data if the API is unavailable.
-
-## ROI formula
-
-```txt
-ROI % = ((token_return_value - campaign_spend) / campaign_spend) * 100
+```bash
+npm run fetch:partners
 ```
 
-Where:
+This script writes:
 
-```txt
-token_return_value = (price_after - price_before) * tokens_allocated_to_campaign
+- `data/partners.generated.json` with avatar path and recent video IDs
+- `public/partners/<slug>.jpg` avatar images
+
+## No API key fallback
+
+Without `YOUTUBE_API_KEY`:
+
+- The app reads `featuredVideoIds` and `recentVideoIds` from `data/scenarios.ts`.
+- If arrays are empty, it shows tasteful placeholders instead of broken images.
+- Avatar fallback expects local files in `public/partners/<slug>.jpg`.
+
+Partner video IDs are left with clear TODO comments in `data/scenarios.ts`.
+
+## Swap partner images
+
+Replace any fallback image by copying your file to:
+
+```bash
+public/partners/<slug>.jpg
 ```
 
-## Deploy
+Examples:
 
-### Vercel
+- `public/partners/elraenn.jpg`
+- `public/partners/socrates-dergi.jpg`
+- `public/partners/htalks.jpg`
 
-- `vercel.json` is included to serve static frontend files.
-- For full backend + database runtime, deploy API/server on a Node host (Render/Fly/Railway) and point frontend API base URL to that host.
+## Export as PDF
 
-### Suggested production topology
+Use browser print:
 
-- Frontend: Vercel/Netlify
-- API: Render/Fly/Railway
-- Database: managed PostgreSQL (Neon/Supabase/RDS)
+1. Open the deployed page.
+2. Press print (`Cmd+P` or `Ctrl+P`).
+3. Save as PDF.
 
+A dedicated `@media print` stylesheet is included:
+
+- hides sticky nav, motion-heavy elements and iframes
+- keeps layout readable on paper
+- keeps charts visible in print output
+
+## Content editing
+
+Edit all scenario content from one file:
+
+```bash
+data/scenarios.ts
+```
+
+This includes:
+
+- hero copy and stat chips
+- ROI strip cards
+- scenario objectives, steps, budgets and KPIs
+- partner metadata and fallback video IDs
