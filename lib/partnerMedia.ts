@@ -1,5 +1,6 @@
 import generatedMediaJson from "@/data/partners.generated.json";
-import { partnerVideos, thumb, type Partner } from "@/data/scenarios";
+import { partnerVideos, thumb } from "@/data/partners.videos";
+import type { Partner } from "@/data/scenarios";
 
 export type ResolvedVideo = {
   id: string;

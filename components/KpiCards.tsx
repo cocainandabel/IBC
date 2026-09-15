@@ -1,15 +1,17 @@
-import type { Scenario } from "@/data/scenarios";
-
 type KpiCardsProps = {
-  scenario: Scenario;
+  kpis: {
+    label: string;
+    value: string;
+  }[];
+  title?: string;
 };
 
-export function KpiCards({ scenario }: KpiCardsProps) {
+export function KpiCards({ kpis, title = "KPIs" }: KpiCardsProps) {
   return (
     <section>
-      <h4 className="mb-4 font-display text-lg text-binance-text">KPIs</h4>
+      <h4 className="mb-4 font-display text-lg text-binance-text">{title}</h4>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {scenario.kpis.map((kpi) => (
+        {kpis.map((kpi) => (
           <article
             key={kpi.label}
             className="rounded-2xl border border-binance-border bg-binance-slate p-4 transition hover:shadow-card-hover"

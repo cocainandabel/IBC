@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { RoiStrip } from "@/components/RoiStrip";
 import { ScenarioTabs } from "@/components/ScenarioTabs";
 import { scenarios } from "@/data/scenarios";
+import { partnershipChannelPartners, partnershipsScenario } from "@/data/partnerships";
 import { resolvePartnerMedia, type ResolvedPartnerMedia } from "@/lib/partnerMedia";
 
 export const dynamic = "force-static";
@@ -14,6 +15,11 @@ async function buildPartnerMediaMap() {
       if (!uniquePartners.has(partner.slug)) {
         uniquePartners.set(partner.slug, partner);
       }
+    }
+  }
+  for (const partner of partnershipChannelPartners) {
+    if (!uniquePartners.has(partner.slug)) {
+      uniquePartners.set(partner.slug, partner);
     }
   }
 
@@ -31,6 +37,7 @@ async function buildPartnerMediaMap() {
 }
 
 export default async function Page() {
+  const allScenarios = [...scenarios, partnershipsScenario];
   const partnerMedia = await buildPartnerMediaMap();
 
   return (
@@ -42,7 +49,7 @@ export default async function Page() {
         <Hero />
         <RoiStrip />
         <section id="scenarios" className="mt-14">
-          <ScenarioTabs scenarios={scenarios} partnerMedia={partnerMedia} />
+          <ScenarioTabs scenarios={allScenarios} partnerMedia={partnerMedia} />
         </section>
         <ClosingBand />
       </div>

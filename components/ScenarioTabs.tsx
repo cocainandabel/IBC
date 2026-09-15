@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { PartnershipsSection } from "@/components/PartnershipsSection";
 import { ScenarioSection } from "@/components/ScenarioSection";
 import { SectionMotion } from "@/components/SectionMotion";
 import type { Scenario, ScenarioKey } from "@/data/scenarios";
@@ -44,7 +45,13 @@ export function ScenarioTabs({ scenarios, partnerMedia }: ScenarioTabsProps) {
         </div>
       </div>
 
-      {selectedScenario ? <ScenarioSection scenario={selectedScenario} partnerMedia={partnerMedia} /> : null}
+      {selectedScenario ? (
+        selectedScenario.key === "partnerships" ? (
+          <PartnershipsSection partnerMedia={partnerMedia} />
+        ) : (
+          <ScenarioSection scenario={selectedScenario} partnerMedia={partnerMedia} />
+        )
+      ) : null}
     </SectionMotion>
   );
 }

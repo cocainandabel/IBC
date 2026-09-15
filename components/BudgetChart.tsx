@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { BudgetTable } from "@/components/BudgetTable";
 import type { Scenario } from "@/data/scenarios";
 
 type BudgetChartProps = {
@@ -38,6 +39,16 @@ export function BudgetChart({ scenario }: BudgetChartProps) {
       })),
     [scenario.budgetLines, tierIndex],
   );
+  const tableRows = scenario.budgetLines.map((line, idx) => {
+    const value = line.allocations[tierIndex] ?? 0;
+    const sharePercent = activeTier.totalUsd ? Math.round((value / activeTier.totalUsd) * 100) : 0;
+    return {
+      label: line.item,
+      amountUsd: value,
+      sharePercent,
+      color: basePalette[idx % basePalette.length],
+    };
+  });
 
   return (
     <section className="rounded-2xl border border-binance-border bg-binance-slate p-5">
@@ -107,38 +118,7 @@ export function BudgetChart({ scenario }: BudgetChartProps) {
           </p>
           <p className="text-sm text-binance-muted">Total budget for selected tier</p>
           <div className="mt-4 overflow-x-auto">
-            <table className="w-full min-w-[420px] text-left">
-              <thead>
-                <tr className="text-xs uppercase tracking-wider text-binance-muted">
-                  <th className="pb-2">Line item</th>
-                  <th className="pb-2">Amount</th>
-                  <th className="pb-2">Share</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {scenario.budgetLines.map((line, idx) => {
-                  const value = line.allocations[tierIndex] ?? 0;
-                  const share = activeTier.totalUsd
-                    ? Math.round((value / activeTier.totalUsd) * 100)
-                    : 0;
-                  return (
-                    <tr key={line.item} className="border-t border-binance-border">
-                      <td className="py-2 text-binance-text">{line.item}</td>
-                      <td className="py-2 text-binance-text">{usd(value)}</td>
-                      <td className="py-2 text-binance-muted">
-                        <span className="inline-flex items-center gap-2">
-                          <span
-                            className="inline-block h-2.5 w-2.5 rounded-full"
-                            style={{ background: basePalette[idx % basePalette.length] }}
-                          />
-                          {share}%
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+            <BudgetTable rows={tableRows} mode="share" />
           </div>
         </div>
       </div>

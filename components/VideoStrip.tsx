@@ -15,7 +15,7 @@ export function VideoStrip({ videos }: VideoStripProps) {
   if (videos.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-binance-border bg-binance-panel p-4 text-sm text-binance-muted">
-        Latest content placeholder, add video IDs in data/scenarios.ts or run the partner fetch
+        Latest content placeholder, add video IDs in data/partners.videos.ts or run the partner fetch
         script with a YouTube API key.
       </div>
     );
