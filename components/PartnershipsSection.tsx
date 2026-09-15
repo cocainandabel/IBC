@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { BudgetTable } from "@/components/BudgetTable";
 import { ExternalLink } from "@/components/ExternalLink";
-import { KpiCards } from "@/components/KpiCards";
 import { VideoStrip } from "@/components/VideoStrip";
 import { partnershipChannelPartners, partnershipsData } from "@/data/partnerships";
 import type { Partner } from "@/data/scenarios";
@@ -53,9 +52,6 @@ export function PartnershipsSection({ partnerMedia }: PartnershipsSectionProps) 
     note: line.note,
     total: line.total,
   }));
-
-  const credibilityPrimary = findChannelPartner(partnershipsData.credibilityLayer.primarySlug);
-  const credibilitySecondary = findChannelPartner(partnershipsData.credibilityLayer.secondarySlug);
 
   return (
     <section className="space-y-8">
@@ -182,6 +178,12 @@ export function PartnershipsSection({ partnerMedia }: PartnershipsSectionProps) 
                   <span className="font-semibold text-binance-text">{partnershipsData.uiText.targetLabel}: </span>
                   {activation.target}
                 </p>
+                <div className="mt-3 rounded-xl border border-binance-border bg-binance-panel p-3">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-binance-muted">
+                    {partnershipsData.uiText.campaignIdeaLabel}
+                  </p>
+                  <p className="mt-1 font-display text-sm text-[#F59E0B]">{activation.ideaTitle}</p>
+                </div>
                 {partner.links.length > 0 ? (
                   <div className="mt-3 flex flex-wrap gap-2">
                     {partner.links.map((link) => (
@@ -205,75 +207,6 @@ export function PartnershipsSection({ partnerMedia }: PartnershipsSectionProps) 
             );
           })}
         </div>
-
-        {credibilityPrimary && credibilitySecondary ? (
-          <article className="mt-4 max-w-4xl rounded-2xl border border-binance-border bg-binance-slate p-5 transition hover:shadow-card-hover">
-            <div className="flex flex-wrap items-start gap-3">
-              <img
-                src={partnerMedia[credibilityPrimary.slug]?.avatarUrl ?? "/partners/placeholder.svg"}
-                alt={`${credibilityPrimary.name} avatar`}
-                className="h-12 w-12 rounded-full border border-binance-border object-cover"
-                loading="lazy"
-                onError={(event) => {
-                  event.currentTarget.src = "/partners/placeholder.svg";
-                }}
-              />
-              <div>
-                <h5 className="font-display text-base text-binance-text">{partnershipsData.credibilityLayer.title}</h5>
-                <p className="mt-1 text-xs text-[#F59E0B]">
-                  {partnershipsData.uiText.pairedBrandLabel}: {partnershipsData.credibilityLayer.pairedBrand}
-                </p>
-              </div>
-            </div>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {credibilityPrimary.reach.slice(0, 3).map((pill) => (
-                <span
-                  key={`${credibilityPrimary.slug}-${pill.label}`}
-                  className="rounded-full border border-binance-border bg-binance-panel px-2.5 py-1 text-xs text-binance-text"
-                >
-                  {pill.label}: {pill.value}
-                </span>
-              ))}
-              {credibilitySecondary.reach.slice(0, 2).map((pill) => (
-                <span
-                  key={`${credibilitySecondary.slug}-${pill.label}`}
-                  className="rounded-full border border-binance-border bg-binance-panel px-2.5 py-1 text-xs text-binance-text"
-                >
-                  {credibilitySecondary.name} {pill.label}: {pill.value}
-                </span>
-              ))}
-            </div>
-            <p className="mt-3 text-sm text-binance-muted">
-              <span className="font-semibold text-binance-text">{partnershipsData.uiText.campaignLabel}: </span>
-              {partnershipsData.credibilityLayer.campaign}
-            </p>
-            <p className="mt-3 text-sm text-binance-muted">
-              <span className="font-semibold text-binance-text">{partnershipsData.uiText.offerLabel}: </span>
-              {partnershipsData.credibilityLayer.offer}
-            </p>
-            <p className="mt-3 text-sm text-binance-muted">
-              <span className="font-semibold text-binance-text">{partnershipsData.uiText.targetLabel}: </span>
-              {partnershipsData.credibilityLayer.target}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {[...credibilityPrimary.links, ...credibilitySecondary.links].slice(0, 5).map((link) => (
-                <ExternalLink
-                  key={`credibility-${link.url}`}
-                  href={link.url}
-                  className="rounded-full border border-binance-border px-3 py-1 text-xs text-binance-text transition hover:bg-binance-panel"
-                >
-                  {link.label}
-                </ExternalLink>
-              ))}
-            </div>
-            <div className="mt-4">
-              <p className="mb-2 text-xs uppercase tracking-[0.2em] text-binance-muted">
-                {partnershipsData.uiText.latestContentLabel}
-              </p>
-              <VideoStrip videos={(partnerMedia[credibilityPrimary.slug]?.latestVideos ?? []).slice(0, 3)} />
-            </div>
-          </article>
-        ) : null}
       </section>
 
       <section>
@@ -301,8 +234,6 @@ export function PartnershipsSection({ partnerMedia }: PartnershipsSectionProps) 
           <BudgetTable rows={budgetRows} mode="note" />
         </div>
       </section>
-
-      <KpiCards kpis={partnershipsData.kpis} />
 
       <p className="rounded-2xl border border-binance-border bg-binance-slate p-5 text-sm text-binance-text">
         {partnershipsData.closingLine}

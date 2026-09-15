@@ -19,6 +19,7 @@ type BrandPartner = {
 type ChannelActivationCard = {
   partnerSlug: string;
   pairedBrand: string;
+  ideaTitle: string;
   campaign: string;
   offer: string;
   target: string;
@@ -95,6 +96,7 @@ export const partnershipsData: {
     principlesTitle: string;
     pairedBrandLabel: string;
     campaignLabel: string;
+    campaignIdeaLabel: string;
     offerLabel: string;
     targetLabel: string;
     whyThemLabel: string;
@@ -112,18 +114,8 @@ export const partnershipsData: {
   };
   brandPartners: BrandPartner[];
   channelActivations: ChannelActivationCard[];
-  credibilityLayer: {
-    title: string;
-    primarySlug: string;
-    secondarySlug: string;
-    pairedBrand: string;
-    campaign: string;
-    offer: string;
-    target: string;
-  };
   buildSteps: string[];
   costTable: BudgetCostLine[];
-  kpis: { label: string; value: string }[];
   closingLine: string;
   complianceNote: string;
 } = {
@@ -136,6 +128,7 @@ export const partnershipsData: {
     principlesTitle: "Principles",
     pairedBrandLabel: "Paired brand",
     campaignLabel: "Campaign",
+    campaignIdeaLabel: "Campaign idea",
     offerLabel: "Offer",
     targetLabel: "Target",
     whyThemLabel: "Why them",
@@ -210,18 +203,6 @@ export const partnershipsData: {
         "Betting adjacency needs Binance compliance sign-off before any joint creative. If the category is not cleared, the same mechanic runs with a club or a ticketing partner instead.",
     },
     {
-      slug: "arkomen",
-      name: "Arko Men",
-      category: "FMCG, men's grooming",
-      whyThem:
-        "One of the most recognised mass-market male brands in Turkey, already active in football and gaming sponsorships. Shelf presence in every market in the country means offline reach that digital cannot buy.",
-      binanceGets:
-        "On-pack and in-store visibility, plus a mainstream signal that Binance is a normal consumer brand, not a niche app.",
-      partnerGets: "A young, digital-first campaign and co-branded creator content.",
-      mechanic:
-        "On-pack codes and a co-branded creator series. Codes unlock a Binance welcome reward after verification, which turns a supermarket shelf into a top-of-funnel channel.",
-    },
-    {
       slug: "phewphew",
       name: "Enis Kirazoglu's game studio (PhewPhew Games)",
       category: "Gaming studio, creator-owned",
@@ -238,6 +219,7 @@ export const partnershipsData: {
     {
       partnerSlug: "elraenn",
       pairedBrand: "Trendyol",
+      ideaTitle: "Challenge stream with live PS5 draw and voucher unlock",
       campaign:
         "A dedicated video and a live stream where the Binance x Trendyol campaign is the format, not an ad read, he sets his audience a challenge, viewers who register and verify through his code enter the prize pool.",
       offer:
@@ -247,6 +229,7 @@ export const partnershipsData: {
     {
       partnerSlug: "enis-kirazoglu",
       pairedBrand: "PhewPhew Games",
+      ideaTitle: "Season launch story with in-game Binance integration",
       campaign:
         "Binance becomes title partner of a PhewPhew season. Enis builds the reveal into his own content, so the partnership shows up as a story rather than a sponsorship slot.",
       offer: "In-game rewards and cosmetics for players who register and verify, plus a GTA VI and console pool at GIST.",
@@ -255,6 +238,7 @@ export const partnershipsData: {
     {
       partnerSlug: "htalks",
       pairedBrand: "Getir",
+      ideaTitle: "Weekly post-match segment with instant Getir credit rewards",
       campaign:
         "A Binance segment inside his post-match live streams, where his code is read natively during the show, week after week, rather than once.",
       offer: "Getir credit for every verified new user through his code, with a bigger tier for the first 500.",
@@ -263,22 +247,13 @@ export const partnershipsData: {
     {
       partnerSlug: "ugur-karakullukcu",
       pairedBrand: "Nesine",
+      ideaTitle: "Recurring match-day ticket draw hosted on channel",
       campaign:
         "A match-day segment on his channel built around the ticket draw, with the winners announced and hosted by him, which turns the reward itself into recurring content.",
       offer: "VIP derby and national team tickets, drawn monthly among verified new users from his code.",
       target: "900 verified sign-ups, 20,000+ draw entries, six content pieces per season.",
     },
   ],
-  credibilityLayer: {
-    title: "Serdar Ali Celikler and Socrates, credibility layer",
-    primarySlug: "serdar-ali-celikler",
-    secondarySlug: "socrates-dergi",
-    pairedBrand: "Credibility layer, VOLE and Socrates distribution",
-    campaign:
-      "No giveaway, a long-form conversation format on what onchain finance means for ordinary savers, run through VOLE and Socrates.",
-    offer: "Trust-led education format, no direct prize mechanic.",
-    target: "Brand trust with an older, higher-value audience.",
-  },
   buildSteps: [
     "Pick the pain, not the logo. Start from what the audience wants, delivery credit, a match ticket, or a console, and work backwards to the brand that already sells it.",
     "Bring the channel to the first meeting. Every brand pitch includes the named creator and their numbers, so the partner sees distribution before they see a deck.",
@@ -323,16 +298,6 @@ export const partnershipsData: {
       note: "Partner brands contribute rewards in kind on top",
       total: true,
     },
-  ],
-  kpis: [
-    { label: "Verified sign-ups from partnerships in the first season", value: "4,000" },
-    {
-      label: "Blended cost per verified user before partner in-kind value",
-      value: "Under $45",
-    },
-    { label: "30-day activation", value: "30% or higher" },
-    { label: "Monthly impressions across the four channels", value: "25M+" },
-    { label: "Brand partnerships signed in year one", value: "5" },
   ],
   closingLine:
     "Events give Binance a moment. Partnerships give Binance a place in people's week: in the app they order from, the show they watch after the match, and the game they play at night.",
