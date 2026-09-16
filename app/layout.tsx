@@ -16,15 +16,18 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Binance Turkey Event Scenarios",
-  description:
-    "Three event activation scenarios for Binance Turkey: gaming, sports and Devconnect.",
+  title: "American Fortress, Asia Market Strategy",
+  description: "IBC 90-day Korea and China go-to-market strategy for American Fortress ($AF).",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sora.variable} bg-binance-charcoal text-binance-text`}>
+      <body className={`${inter.variable} ${sora.variable} bg-fortress-base text-fortress-text`}>
         {children}
         <Analytics />
       </body>

@@ -1,6 +1,6 @@
-# Binance Turkey Event Scenarios Microsite
+# American Fortress, Asia Market Strategy Microsite
 
-Production-grade single-page microsite built for pitching three event activation routes for Binance Turkey.
+Single-page proposal microsite for IBC's 90-day Korea and China go-to-market plan for American Fortress.
 
 ## Stack
 
@@ -9,105 +9,84 @@ Production-grade single-page microsite built for pitching three event activation
 - Tailwind CSS
 - Framer Motion
 - Recharts
+- Vercel Analytics
 
-## Run locally
+## Setup
 
 ```bash
-npm install
+npm i
+```
+
+Create `.env.local`:
+
+```bash
+NEXT_PUBLIC_SITE_PASSCODE=fortress
+```
+
+If the variable is missing, the app defaults to `fortress`.
+
+## Run
+
+```bash
 npm run dev
 ```
 
 Open `http://localhost:3000`.
 
-## Production build
+## Build and lint
 
 ```bash
 npm run build
-npm run start
+npm run lint
 ```
 
-The project is deployable to Vercel with zero config.
+## Deploy to Vercel
 
-## Project structure
-
-- `app/page.tsx`: page composition
-- `data/scenarios.ts`: all copy, numbers and scenario content
-- `components/*`: small UI blocks
-- `lib/partnerMedia.ts`: YouTube and fallback media resolver
-- `scripts/fetch-partners.ts`: partner media generation script
-
-## YouTube API key setup
-
-Create `.env.local`:
+Zero-config deployment:
 
 ```bash
-YOUTUBE_API_KEY=your_key_here
+npx vercel --prod
 ```
 
-If this key exists, partner cards fetch latest channel media at build/render time.
-
-## Generate static partner media
-
-To make the site fully static after one data pull:
+If this is your first deploy on this machine:
 
 ```bash
-npm run fetch:partners
+npx vercel login
+npx vercel link --project <your-project-name>
+npx vercel --prod
 ```
 
-This script writes:
+## Content and locales
 
-- `data/partners.generated.json` with avatar path and recent video IDs
-- `public/partners/<slug>.jpg` avatar images
+Strategy content is locale-driven:
 
-## No API key fallback
+- `data/strategy.en.ts`
+- `data/strategy.ko.ts`
+- `data/strategy.zh.ts`
+- `data/strategy.ts` locale map and defaults
 
-Without `YOUTUBE_API_KEY`:
+Shared typing is in `data/strategy.types.ts`.
 
-- The app reads `featuredVideoIds` and `recentVideoIds` from `data/scenarios.ts`.
-- If arrays are empty, it shows tasteful placeholders instead of broken images.
-- Avatar fallback expects local files in `public/partners/<slug>.jpg`.
+## Key components
 
-Partner video IDs are left with clear TODO comments in `data/scenarios.ts`.
+- `components/StrategyMicrosite.tsx`
+- `components/PasscodeGate.tsx`
+- `components/TimelineSection.tsx`
+- `components/MarketTabs.tsx`
+- `components/BudgetOutline.tsx`
+- `components/BriefCard.tsx`
 
-## Swap partner images
+## Brand assets
 
-Replace any fallback image by copying your file to:
+- Wordmark is text-rendered by design.
+- Placeholder slot for a future official logo is at `public/brand/logo.svg`.
 
-```bash
-public/partners/<slug>.jpg
-```
-
-Examples:
-
-- `public/partners/elraenn.jpg`
-- `public/partners/socrates-dergi.jpg`
-- `public/partners/htalks.jpg`
-
-## Export as PDF
+## PDF export
 
 Use browser print:
 
-1. Open the deployed page.
+1. Open the page.
 2. Press print (`Cmd+P` or `Ctrl+P`).
 3. Save as PDF.
 
-A dedicated `@media print` stylesheet is included:
-
-- hides sticky nav, motion-heavy elements and iframes
-- keeps layout readable on paper
-- keeps charts visible in print output
-
-## Content editing
-
-Edit all scenario content from one file:
-
-```bash
-data/scenarios.ts
-```
-
-This includes:
-
-- hero copy and stat chips
-- ROI strip cards
-- scenario objectives, steps, budgets and KPIs
-- partner metadata and fallback video IDs
+Print CSS hides motion-heavy UI and keeps sections readable.
