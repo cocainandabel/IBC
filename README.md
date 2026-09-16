@@ -17,14 +17,6 @@ Single-page proposal microsite for IBC's 90-day Korea and China go-to-market pla
 npm i
 ```
 
-Create `.env.local`:
-
-```bash
-NEXT_PUBLIC_SITE_PASSCODE=fortress
-```
-
-If the variable is missing, the app defaults to `fortress`.
-
 ## Run
 
 ```bash

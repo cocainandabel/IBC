@@ -10,7 +10,6 @@ import { LocaleProvider, useLocale } from "@/components/LocaleProvider";
 import { MarketTabs } from "@/components/MarketTabs";
 import { NextSteps } from "@/components/NextSteps";
 import { ObjectivesSection } from "@/components/ObjectivesSection";
-import { PasscodeGate } from "@/components/PasscodeGate";
 import { Reveal } from "@/components/Reveal";
 import { RolesGrid } from "@/components/RolesGrid";
 import { TimelineSection } from "@/components/TimelineSection";
@@ -37,60 +36,58 @@ function StrategyContent() {
           <LanguageToggle label={strategy.header.localeLabel} locale={locale} onChange={setLocale} />
         </header>
 
-        <PasscodeGate copy={strategy.gate}>
-          <div className="mt-8 space-y-12">
-            <Reveal delay={0.02}>
-              <HeroSection hero={strategy.hero} onSeePlan={scrollToPlan} />
-            </Reveal>
+        <div className="mt-8 space-y-12">
+          <Reveal delay={0.02}>
+            <HeroSection hero={strategy.hero} onSeePlan={scrollToPlan} />
+          </Reveal>
 
-            <Reveal delay={0.04}>
-              <ObjectivesSection objectives={strategy.objectives} />
-            </Reveal>
+          <Reveal delay={0.04}>
+            <ObjectivesSection objectives={strategy.objectives} />
+          </Reveal>
 
-            <FortressDivider />
+          <FortressDivider />
 
-            <Reveal delay={0.06}>
-              <TimelineSection timeline={strategy.timeline} />
-              <p className="mt-5 rounded-2xl border border-fortress-border bg-fortress-surface p-4 text-sm text-fortress-muted">
-                {strategy.timeline.highlightBox}
-              </p>
-            </Reveal>
+          <Reveal delay={0.06}>
+            <TimelineSection timeline={strategy.timeline} />
+            <p className="mt-5 rounded-2xl border border-fortress-border bg-fortress-surface p-4 text-sm text-fortress-muted">
+              {strategy.timeline.highlightBox}
+            </p>
+          </Reveal>
 
-            <FortressDivider />
+          <FortressDivider />
 
-            <Reveal delay={0.08}>
-              <MarketTabs markets={strategy.markets} />
-            </Reveal>
+          <Reveal delay={0.08}>
+            <MarketTabs markets={strategy.markets} />
+          </Reveal>
 
-            <Reveal delay={0.1}>
-              <RolesGrid roles={strategy.roles} />
-            </Reveal>
+          <Reveal delay={0.1}>
+            <RolesGrid roles={strategy.roles} />
+          </Reveal>
 
-            <Reveal delay={0.12}>
-              <BudgetOutline budget={strategy.budget} />
-            </Reveal>
+          <Reveal delay={0.12}>
+            <BudgetOutline budget={strategy.budget} />
+          </Reveal>
 
-            <Reveal delay={0.14}>
-              <NextSteps nextSteps={strategy.nextSteps} />
-            </Reveal>
+          <Reveal delay={0.14}>
+            <NextSteps nextSteps={strategy.nextSteps} />
+          </Reveal>
+        </div>
+
+        <section className="relative left-1/2 mt-14 w-screen -translate-x-1/2 bg-fortress-gold px-6 py-10 text-fortress-base md:px-12">
+          <div className="mx-auto w-full max-w-7xl">
+            <p className="font-display text-2xl font-semibold md:text-3xl">{strategy.closing.band}</p>
+            <p className="mt-4 text-sm">
+              {strategy.closing.contactPrefix}: {strategy.closing.preparedBy} (
+              <a href={`mailto:${strategy.closing.email}`} className="underline">
+                {strategy.closing.email}
+              </a>
+              ) ·{" "}
+              <ExternalLink href={strategy.closing.xUrl} className="underline">
+                {strategy.closing.xLabel}
+              </ExternalLink>
+            </p>
           </div>
-
-          <section className="relative left-1/2 mt-14 w-screen -translate-x-1/2 bg-fortress-gold px-6 py-10 text-fortress-base md:px-12">
-            <div className="mx-auto w-full max-w-7xl">
-              <p className="font-display text-2xl font-semibold md:text-3xl">{strategy.closing.band}</p>
-              <p className="mt-4 text-sm">
-                {strategy.closing.contactPrefix}: {strategy.closing.preparedBy} (
-                <a href={`mailto:${strategy.closing.email}`} className="underline">
-                  {strategy.closing.email}
-                </a>
-                ) ·{" "}
-                <ExternalLink href={strategy.closing.xUrl} className="underline">
-                  {strategy.closing.xLabel}
-                </ExternalLink>
-              </p>
-            </div>
-          </section>
-        </PasscodeGate>
+        </section>
       </div>
     </main>
   );
