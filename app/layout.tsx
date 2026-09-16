@@ -18,7 +18,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "American Fortress, Asia Market Strategy",
   description: "IBC 90-day Korea and China go-to-market strategy for American Fortress ($AF).",
-  metadataBase: new URL("https://binance-tr-scenarios.vercel.app"),
+  metadataBase: new URL("https://american-fortress-asia-strategy.vercel.app"),
   robots: {
     index: false,
     follow: false,
