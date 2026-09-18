@@ -1,28 +1,24 @@
 # Implementation decisions
 
-## Scope and architecture
+## Scope
 
-1. Kept the project in the existing Next.js repository and replaced the page composition with the new American Fortress strategy microsite. This reduced setup time and kept Vercel deployment continuity.
-2. Implemented locale data as `data/strategy.en.ts`, `data/strategy.ko.ts`, and `data/strategy.zh.ts`, with `data/strategy.ts` as the central map and defaults file.
-3. Added `data/strategy.types.ts` as a shared typed contract so components do not hardcode content and can render any locale object.
+1. Replaced the previous landing page with a dedicated SAAR proposal page and kept the project on Next.js App Router.
+2. Kept all business copy and numeric values in `data/offer.ts` and `data/kols.ts` only, with typed exports.
 
-## Indexing and access posture
+## Performance-first choices
 
-4. Removed the client-side passcode gate after stakeholder feedback and left direct page access enabled.
-5. Kept `robots` noindex and nofollow metadata in `app/layout.tsx`.
+3. Enabled static export via `output: "export"` in `next.config.mjs`, no API routes and no runtime data fetching.
+4. Removed animation and chart libraries from runtime usage. Scroll reveals and counters use a small IntersectionObserver-based client hook.
+5. Removed analytics and other third-party scripts to minimize JavaScript and network overhead.
+6. Used only `Inter` and `Space Grotesk` from `next/font/google`, `display: "swap"`, and limited weights.
+7. Used inline SVG donut rendering for allocation chart to avoid a chart dependency.
 
-## UX and visual behavior
+## UI and behavior
 
-6. Used a text wordmark `AMERICAN FORTRESS` in the header and added `/public/brand/logo.svg` as a TODO placeholder slot, without rendering it by default.
-7. Added a locale toggle with `localStorage` persistence and safe try/catch guards.
-8. Implemented phase navigation as smooth scroll buttons and market switching as sticky tabs.
-9. Added a content-mix pill row in phase 3 to satisfy the required weekly mix visualization.
+8. Implemented a passcode gate with `NEXT_PUBLIC_SITE_PASSCODE` fallback `saar`, storing unlock state in `sessionStorage`.
+9. Implemented only the required interactive client state: passcode gate, KOL tabs, and counters.
+10. Kept brand slots as TODO assets at `public/brand/saar.png` and `public/brand/ibc.svg`, while rendering text wordmarks by default.
 
-## Budget and metrics behavior
+## Lighthouse
 
-10. Set the default editable budget to `$150,000` via `defaultBudgetTotal` in `data/strategy.ts`.
-11. Budget dollar amounts are recomputed live from the editable total input and percentage shares from strategy data.
-
-## Translation note
-
-12. Korean and Chinese locale files are first-pass translations and are explicitly marked with `// TODO: native review`.
+11. Lighthouse mobile results are recorded after local static build and test execution.

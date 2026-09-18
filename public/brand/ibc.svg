@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" fill="none">
+  <rect width="320" height="120" rx="16" fill="#12121A" />
+  <rect x="1" y="1" width="318" height="118" rx="15" stroke="#262633" />
+  <text x="160" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#C6FF3D">
+    TODO IBC LOGO
+  </text>
+</svg>

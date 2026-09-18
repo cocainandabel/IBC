@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
-import { Inter, Sora } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
+import { offer } from "@/data/offer";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400"],
   variable: "--font-inter",
   display: "swap",
 });
 
-const sora = Sora({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-sora",
+  weight: ["700"],
+  variable: "--font-space-grotesk",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "American Fortress, Asia Market Strategy",
-  description: "IBC 90-day Korea and China go-to-market strategy for American Fortress ($AF).",
-  metadataBase: new URL("https://american-fortress-asia-strategy.vercel.app"),
+  title: offer.meta.title,
+  description: offer.meta.description,
+  metadataBase: new URL("https://ibc-saar-growth-package.vercel.app"),
   robots: {
     index: false,
     follow: false,
@@ -28,9 +30,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sora.variable} bg-fortress-base text-fortress-text`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-saar-base text-saar-text`}>
         {children}
-        <Analytics />
       </body>
     </html>
   );

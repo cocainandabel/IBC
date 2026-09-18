@@ -18,8 +18,8 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "56px",
-          background: "#070B14",
-          color: "#E6EAF2",
+          background: "#0A0A0F",
+          color: "#F2F2F5",
           fontFamily: "Inter, sans-serif",
         }}
       >
@@ -27,19 +27,21 @@ export default function OpenGraphImage() {
           style={{
             fontSize: 24,
             letterSpacing: "0.24em",
-            color: "#D4A64A",
+            color: "#C6FF3D",
             textTransform: "uppercase",
           }}
         >
-          American Fortress
+          IBC x SAAR
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ fontSize: 72, fontWeight: 700, maxWidth: 880 }}>Korea and China, in 90 days</div>
-          <div style={{ fontSize: 30, color: "#8A94A8", maxWidth: 980 }}>
-            Asia market strategy by IBC for $AF listing readiness.
+          <div style={{ fontSize: 72, fontWeight: 700, maxWidth: 920 }}>
+            Attention first. Listings follow.
+          </div>
+          <div style={{ fontSize: 30, color: "#8B8B9E", maxWidth: 980 }}>
+            $35K growth package proposal for SAAR.
           </div>
         </div>
-        <div style={{ fontSize: 22, color: "#D4A64A" }}>americanfortress.io</div>
+        <div style={{ fontSize: 22, color: "#FF3DA6" }}>Prepared by IBC, September 2026</div>
       </div>
     ),
     size,

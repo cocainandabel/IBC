@@ -4,19 +4,24 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 type CounterProps = {
   value: number;
+  prefix?: string;
   suffix?: string;
+  durationMs?: number;
 };
 
 function formatValue(n: number): string {
   return new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(n);
 }
 
-export function Counter({ value, suffix = "" }: CounterProps) {
+export function Counter({ value, prefix = "", suffix = "", durationMs = 1100 }: CounterProps) {
   const [display, setDisplay] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement | null>(null);
 
-  const formatted = useMemo(() => `${formatValue(display)}${suffix}`, [display, suffix]);
+  const formatted = useMemo(
+    () => `${prefix}${formatValue(display)}${suffix}`,
+    [display, prefix, suffix],
+  );
 
   useEffect(() => {
     if (!ref.current || hasAnimated) {
@@ -30,7 +35,6 @@ export function Counter({ value, suffix = "" }: CounterProps) {
           return;
         }
         setHasAnimated(true);
-        const durationMs = 1200;
         const startAt = performance.now();
 
         const tick = (nowTs: number) => {
@@ -48,7 +52,7 @@ export function Counter({ value, suffix = "" }: CounterProps) {
 
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [hasAnimated, value]);
+  }, [durationMs, hasAnimated, value]);
 
   return <span ref={ref}>{formatted}</span>;
 }

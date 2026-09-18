@@ -1,15 +1,13 @@
-# American Fortress, Asia Market Strategy Microsite
+# IBC x SAAR, $35K Growth Package Proposal Microsite
 
-Single-page proposal microsite for IBC's 90-day Korea and China go-to-market plan for American Fortress.
+Single-page proposal microsite for the SAAR team, built as a fast mobile-first pitch from IBC.
 
 ## Stack
 
 - Next.js 14 (App Router)
 - TypeScript
 - Tailwind CSS
-- Framer Motion
-- Recharts
-- Vercel Analytics
+- App Router static export (`output: "export"`)
 
 ## Setup
 
@@ -17,7 +15,15 @@ Single-page proposal microsite for IBC's 90-day Korea and China go-to-market pla
 npm i
 ```
 
-## Run
+Create `.env.local`:
+
+```bash
+NEXT_PUBLIC_SITE_PASSCODE=saar
+```
+
+If omitted, the passcode defaults to `saar`.
+
+## Run locally
 
 ```bash
 npm run dev
@@ -32,6 +38,8 @@ npm run build
 npm run lint
 ```
 
+Static output is generated in `out/`.
+
 ## Deploy to Vercel
 
 Zero-config deployment:
@@ -40,45 +48,30 @@ Zero-config deployment:
 npx vercel --prod
 ```
 
-If this is your first deploy on this machine:
-
-```bash
-npx vercel login
-npx vercel link --project <your-project-name>
-npx vercel --prod
-```
-
 ## Content and locales
 
-Strategy content is locale-driven:
+All copy, numbers, and section lists are data-driven:
 
-- `data/strategy.en.ts`
-- `data/strategy.ko.ts`
-- `data/strategy.zh.ts`
-- `data/strategy.ts` locale map and defaults
+- `data/offer.ts`
+- `data/kols.ts`
 
-Shared typing is in `data/strategy.types.ts`.
+## Component map
 
-## Key components
-
-- `components/StrategyMicrosite.tsx`
+- `components/SaarProposalPage.tsx`
+- `components/Hero.tsx`
+- `components/CompareCards.tsx`
+- `components/PackageGrid.tsx`
+- `components/AllocationChart.tsx`
+- `components/Timeline.tsx`
+- `components/KpiCards.tsx`
+- `components/KolTabs.tsx`
+- `components/WhyIbc.tsx`
+- `components/Terms.tsx`
+- `components/ClosingBand.tsx`
 - `components/PasscodeGate.tsx`
-- `components/TimelineSection.tsx`
-- `components/MarketTabs.tsx`
-- `components/BudgetOutline.tsx`
-- `components/BriefCard.tsx`
 
 ## Brand assets
 
-- Wordmark is text-rendered by design.
-- Placeholder slot for a future official logo is at `public/brand/logo.svg`.
-
-## PDF export
-
-Use browser print:
-
-1. Open the page.
-2. Press print (`Cmd+P` or `Ctrl+P`).
-3. Save as PDF.
-
-Print CSS hides motion-heavy UI and keeps sections readable.
+- TODO slot for SAAR: `public/brand/saar.png`
+- TODO slot for IBC: `public/brand/ibc.svg`
+- Page currently renders text wordmarks until real files are provided.

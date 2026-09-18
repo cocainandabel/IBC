@@ -1,23 +1,19 @@
+import type { Offer } from "@/data/offer";
+
 type KpiCardsProps = {
-  kpis: {
-    label: string;
-    value: string;
-  }[];
-  title?: string;
+  kpis: Offer["kpis"];
 };
 
-export function KpiCards({ kpis, title = "KPIs" }: KpiCardsProps) {
+export function KpiCards({ kpis }: KpiCardsProps) {
   return (
-    <section>
-      <h4 className="mb-4 font-display text-lg text-binance-text">{title}</h4>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {kpis.map((kpi) => (
-          <article
-            key={kpi.label}
-            className="rounded-2xl border border-binance-border bg-binance-slate p-4 transition hover:shadow-card-hover"
-          >
-            <p className="font-display text-3xl font-bold text-binance-yellow">{kpi.value}</p>
-            <p className="mt-1 text-sm text-binance-muted">{kpi.label}</p>
+    <section data-reveal>
+      <h2 className="font-display text-2xl text-saar-text md:text-4xl">{kpis.title}</h2>
+      <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
+        {kpis.items.map((item) => (
+          <article key={item.label} className="rounded-2xl border border-saar-border bg-saar-panel p-4">
+            <p className="font-display text-3xl text-saar-lime">{item.value}</p>
+            <p className="mt-1 text-sm text-saar-text">{item.label}</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-saar-muted">{item.note}</p>
           </article>
         ))}
       </div>
