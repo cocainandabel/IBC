@@ -21,4 +21,13 @@
 
 ## Lighthouse
 
-11. Lighthouse mobile results are recorded after local static build and test execution.
+11. Lighthouse mobile audit was run against the static `out/` build using `serve` and `npx lighthouse`.
+12. Final scores:
+   - Performance: 99
+   - Accessibility: 100
+   - Best Practices: 96
+   - SEO: 60 (expected due intentional `noindex`)
+   - LCP: 2017 ms
+   - CLS: 0
+   - Total byte weight: 148 KiB
+13. Performance and accessibility targets were met. LCP remained above 1.5s in the default mobile simulation while keeping the required passcode gate and full proposal content.
