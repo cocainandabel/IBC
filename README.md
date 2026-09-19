@@ -1,134 +1,68 @@
-# Web3 Twitter Intelligence Platform
+# IBC x SAAR, $35K Growth Package Proposal Microsite
 
-Production-ready foundation for analyzing Web3 client Twitter/X accounts around KOL posts.
-
-## Features
-
-- Before vs after KOL comparison graph
-- Indicators:
-  - CoinMarketCap token price movement
-  - Twitter follower growth
-  - Engagement rate delta
-  - Top posts (before/after)
-  - ROI calculation and breakdown
-- Timeline chart with KOL post marker
+Single-page proposal microsite for the SAAR team, built as a fast mobile-first pitch from IBC.
 
 ## Stack
 
-- Frontend: HTML/CSS/Vanilla JS
-- Backend: Node.js + Express
-- Database: PostgreSQL
-- External market data: CoinMarketCap API
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- App Router static export (`output: "export"`)
 
-## Project structure
-
-- `index.html`, `style.css`, `app.js` - dashboard UI
-- `src/server.js` - API server
-- `src/routes/*` - API routes
-- `src/services/*` - analytics and CoinMarketCap integration
-- `src/lib/db.js` - PostgreSQL pool + helpers
-- `db/migrations/001_init.sql` - schema
-- `db/seeds/001_seed.sql` - initial seed data
-- `src/scripts/*` - migration, seed, CMC sync scripts
-
-## 1) Environment setup
-
-Copy the environment example:
+## Setup
 
 ```bash
-cp .env.example .env
+npm i
 ```
 
-Required variables:
-
-- `PORT` (default `8080`)
-- `DATABASE_URL` (PostgreSQL connection string)
-- `CMC_API_KEY` (for live CoinMarketCap sync)
-- `CMC_BASE_URL` (default `https://pro-api.coinmarketcap.com`)
-
-## 2) Install dependencies
-
-```bash
-npm install
-```
-
-## 3) Prepare database
-
-Run migrations and seed:
-
-```bash
-npm run db:migrate
-npm run db:seed
-```
-
-## 4) Start the platform
-
-```bash
-npm run start
-```
-
-Open `http://localhost:8080`.
-
-For development with auto-reload:
+## Run locally
 
 ```bash
 npm run dev
 ```
 
-## 5) Sync live CoinMarketCap prices
+Open `http://localhost:3000`.
+
+## Build and lint
 
 ```bash
-npm run sync:cmc
+npm run build
+npm run lint
 ```
 
-This updates latest token prices for all projects in the database and stores them in `price_snapshots`.
+Static output is generated in `out/`.
 
-## 6) Run automated CoinMarketCap worker
+## Deploy to Vercel
 
-For continuous syncing (scheduler/worker mode), run:
+Zero-config deployment:
 
 ```bash
-npm run worker:cmc
+npx vercel --prod
 ```
 
-Worker environment variables:
+## Content and locales
 
-- `CMC_SYNC_INTERVAL_MINUTES` (default `60`)
-- `CMC_WORKER_RUN_ON_START` (default `true`)
+All copy, numbers, and section lists are data-driven:
 
-The worker has overlap protection (won't run a new cycle if a previous cycle is still running) and supports graceful shutdown on `SIGINT`/`SIGTERM`.
+- `data/offer.ts`
+- `data/kols.ts`
 
-## API overview
+## Component map
 
-- `GET /api/health`
-- `GET /api/projects`
-- `GET /api/projects/:projectId/campaigns`
-- `GET /api/projects/:projectId/campaigns/:campaignId/analytics`
+- `components/SaarProposalPage.tsx`
+- `components/Hero.tsx`
+- `components/CompareCards.tsx`
+- `components/PackageGrid.tsx`
+- `components/AllocationChart.tsx`
+- `components/Timeline.tsx`
+- `components/KpiCards.tsx`
+- `components/KolTabs.tsx`
+- `components/WhyIbc.tsx`
+- `components/Terms.tsx`
+- `components/ClosingBand.tsx`
 
-The frontend consumes these APIs and falls back to local seeded demo data if the API is unavailable.
+## Brand assets
 
-## ROI formula
-
-```txt
-ROI % = ((token_return_value - campaign_spend) / campaign_spend) * 100
-```
-
-Where:
-
-```txt
-token_return_value = (price_after - price_before) * tokens_allocated_to_campaign
-```
-
-## Deploy
-
-### Vercel
-
-- `vercel.json` is included to serve static frontend files.
-- For full backend + database runtime, deploy API/server on a Node host (Render/Fly/Railway) and point frontend API base URL to that host.
-
-### Suggested production topology
-
-- Frontend: Vercel/Netlify
-- API: Render/Fly/Railway
-- Database: managed PostgreSQL (Neon/Supabase/RDS)
-
+- TODO slot for SAAR: `public/brand/saar.png`
+- TODO slot for IBC: `public/brand/ibc.svg`
+- Page currently renders text wordmarks until real files are provided.

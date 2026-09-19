@@ -1,3 +1,8 @@
 node_modules/
 .env
+.env.local
+.next/
+out/
 npm-debug.log*
+.vercel
+.env*
