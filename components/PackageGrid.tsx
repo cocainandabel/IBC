@@ -1,4 +1,3 @@
-import { AllocationChart } from "@/components/AllocationChart";
 import type { Offer } from "@/data/offer";
 
 type PackageGridProps = {
@@ -30,10 +29,6 @@ export function PackageGrid({ packageSection }: PackageGridProps) {
             </ul>
           </article>
         ))}
-      </div>
-
-      <div className="mt-5">
-        <AllocationChart packageSection={packageSection} />
       </div>
     </section>
   );

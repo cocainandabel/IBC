@@ -2,7 +2,6 @@ import { ClosingBand } from "@/components/ClosingBand";
 import { CompareCards } from "@/components/CompareCards";
 import { Hero } from "@/components/Hero";
 import { KolTabs } from "@/components/KolTabs";
-import { KpiCards } from "@/components/KpiCards";
 import { PackageGrid } from "@/components/PackageGrid";
 import { RevealObserver } from "@/components/RevealObserver";
 import { Terms } from "@/components/Terms";
@@ -30,7 +29,6 @@ export function SaarProposalPage({ offer, kols, wallets }: SaarProposalPageProps
           <CompareCards compare={offer.compare} />
           <PackageGrid packageSection={offer.packageSection} />
           <Timeline timeline={offer.timeline} />
-          <KpiCards kpis={offer.kpis} />
           <KolTabs config={offer.kolTabs} kols={kols} wallets={wallets} />
           <WhyIbc whyIbc={offer.whyIbc} />
           <Terms terms={offer.terms} />
