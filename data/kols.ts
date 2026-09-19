@@ -99,6 +99,12 @@ const kolHandles = [
   "cfm_sol",
   "OrdzWorld",
   "sol_jingou",
+  "Bullrun_Gravano",
+  "EricCryptoman",
+  "shahh",
+  "KadunaBull",
+  "notdecu",
+  "fuelkek",
 ] as const;
 
 const typeCycle: KolType[] = ["Caller", "Trader", "Meme", "Educator"];
