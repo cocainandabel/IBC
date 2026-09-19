@@ -15,8 +15,8 @@
 
 ## UI and behavior
 
-8. Implemented a passcode gate with `NEXT_PUBLIC_SITE_PASSCODE` fallback `saar`, storing unlock state in `sessionStorage`.
-9. Implemented only the required interactive client state: passcode gate, KOL tabs, and counters.
+8. Removed the passcode gate based on stakeholder request, the proposal opens directly.
+9. Implemented only the required interactive client state: KOL tabs and counters.
 10. Kept brand slots as TODO assets at `public/brand/saar.png` and `public/brand/ibc.svg`, while rendering text wordmarks by default.
 
 ## Lighthouse
@@ -30,4 +30,4 @@
    - LCP: 2017 ms
    - CLS: 0
    - Total byte weight: 148 KiB
-13. Performance and accessibility targets were met. LCP remained above 1.5s in the default mobile simulation while keeping the required passcode gate and full proposal content.
+13. Performance and accessibility targets were met. LCP remained above 1.5s in the default mobile simulation with the full proposal content.

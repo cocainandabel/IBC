@@ -42,14 +42,6 @@ export type Offer = {
     title: string;
     description: string;
   };
-  passcodeGate: {
-    title: string;
-    subtitle: string;
-    inputLabel: string;
-    inputPlaceholder: string;
-    unlockButtonLabel: string;
-    errorMessage: string;
-  };
   hero: {
     eyebrow: string;
     title: string;
@@ -127,14 +119,6 @@ export const offer: Offer = {
     title: "IBC x SAAR, $35K Growth Package",
     description:
       "IBC growth proposal for SAAR, a $35K attention-first package as the strategic alternative to a $50K MEXC spot listing.",
-  },
-  passcodeGate: {
-    title: "IBC x SAAR Proposal Access",
-    subtitle: "This passcode gate is only for private founder review.",
-    inputLabel: "Passcode",
-    inputPlaceholder: "Enter passcode",
-    unlockButtonLabel: "Unlock proposal",
-    errorMessage: "Wrong passcode, please try again.",
   },
   hero: {
     eyebrow: "IBC x SAAR",

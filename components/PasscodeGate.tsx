@@ -1,12 +1,20 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import type { Offer } from "@/data/offer";
 
 const SESSION_KEY = "saar-proposal-unlocked";
 
+type PasscodeCopy = {
+  title: string;
+  subtitle: string;
+  inputLabel: string;
+  inputPlaceholder: string;
+  unlockButtonLabel: string;
+  errorMessage: string;
+};
+
 type PasscodeGateProps = {
-  copy: Offer["passcodeGate"];
+  copy: PasscodeCopy;
   children: React.ReactNode;
 };
 

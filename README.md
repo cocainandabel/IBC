@@ -15,14 +15,6 @@ Single-page proposal microsite for the SAAR team, built as a fast mobile-first p
 npm i
 ```
 
-Create `.env.local`:
-
-```bash
-NEXT_PUBLIC_SITE_PASSCODE=saar
-```
-
-If omitted, the passcode defaults to `saar`.
-
 ## Run locally
 
 ```bash
@@ -68,7 +60,6 @@ All copy, numbers, and section lists are data-driven:
 - `components/WhyIbc.tsx`
 - `components/Terms.tsx`
 - `components/ClosingBand.tsx`
-- `components/PasscodeGate.tsx`
 
 ## Brand assets
 
