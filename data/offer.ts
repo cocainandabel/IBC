@@ -322,8 +322,9 @@ export const offer: Offer = {
   terms: {
     title: "Terms",
     points: [
-      "50% on signing, 50% on day 15.",
+      "Full payment is required upfront if SAAR wants to start with IBC.",
       "Package runs 30 days from kickoff.",
+      "KOL management is handled by IBC, but KOL payment terms and settlements are executed by the SAAR side.",
       "All paid posts follow the account owners' editorial guidelines and disclosure rules.",
       "Content and creator scripts approved by SAAR before posting.",
       "KPIs are targets, not guarantees, markets are markets.",
