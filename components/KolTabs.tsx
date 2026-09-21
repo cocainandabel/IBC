@@ -134,7 +134,7 @@ export function KolTabs({ config, kols, wallets }: KolTabsProps) {
           <p className="mb-3 text-sm text-saar-muted">{config.subtitle}</p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {orderedKols.map((kol) => (
-              <KolCard key={kol.name} kol={kol} />
+              <KolCard key={kol.handle} kol={kol} />
             ))}
           </div>
         </div>
