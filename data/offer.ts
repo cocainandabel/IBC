@@ -124,7 +124,7 @@ export const offer: Offer = {
     eyebrow: "IBC x SAAR",
     title: "Attention first. Listings follow.",
     subtitle:
-      "A $35K growth package that puts SAAR in front of Mario Nawfal's audience, 50 to 200 KOLs and the wallets that actually move meme markets.",
+      "A $35K growth package that puts SAAR in front of Mario Nawfal's audience, plus 50 to 200 KOL intros and the wallets that actually move meme markets.",
     stats: [
       {
         prefix: "3 to ",
@@ -136,7 +136,7 @@ export const offer: Offer = {
         prefix: "50 to ",
         countTo: 200,
         suffix: "",
-        label: "KOLs activated",
+        label: "KOLs we can connect",
       },
       {
         prefix: "",
@@ -147,7 +147,7 @@ export const offer: Offer = {
     ],
     packageButtonLabel: "See the package",
     bookCallButtonLabel: "Book a call",
-    bookCallUrl: "https://t.me/your_telegram",
+    bookCallUrl: "https://t.me/Alpaycin0x",
     footerLine: "Prepared by Alpay Aktuğ, Growth Lead, IBC. September 2026.",
     ibcWordmark: "IBC",
     saarWordmark: "SAAR",
@@ -168,7 +168,7 @@ export const offer: Offer = {
       points: [
         "30 days of continuous attention instead of one day.",
         "Mario Nawfal and the Roundtable reach mainstream crypto, not just listing hunters.",
-        "50 to 200 creators and smart wallets brought in as holders and amplifiers.",
+        "50 to 200 KOL intros and smart wallet intros, with activation only if SAAR chooses.",
         "A community machine, content, design, moderation, that keeps running after the campaign.",
         "$15K left in the SAAR treasury, which can fund the listing later from a position of strength.",
       ],
@@ -214,10 +214,10 @@ export const offer: Offer = {
       },
       {
         icon: "04",
-        title: "KOL activation, 50 to 200 creators",
+        title: "KOL intros, 50 to 200 creators",
         included:
-          "Access to IBC's KOL network. We brief, coordinate and track creators posting about SAAR. Minimum 50 creators, up to 200 depending on angle and traction. Mix of paid posts and holder-aligned creators.",
-        deliverables: ["Creator list", "Tracked links", "Post schedule", "Results sheet"],
+          "Access to IBC's KOL network. We connect SAAR to 50 to 200 creators as intros. SAAR selects which creators to activate, and activation runs only on SAAR approval.",
+        deliverables: ["Intro list", "Shortlist by vertical", "Optional activation plan", "Results sheet"],
       },
       {
         icon: "05",
@@ -235,7 +235,7 @@ export const offer: Offer = {
         line: "Social media operations, 30 days (content, design, moderation)",
         amount: 8000,
       },
-      { line: "KOL activation, 50 to 200 creators", amount: 10000 },
+      { line: "KOL intros, 50 to 200 creators", amount: 10000 },
       { line: "Smart wallet and trader outreach", amount: 3000 },
     ],
     totalLabel: "Total",
@@ -259,7 +259,7 @@ export const offer: Offer = {
         label: "Days 4 to 10",
         points: [
           "Social engine live, 3 posts a day",
-          "First wave of KOLs",
+          "First batch of KOL intros",
           "Smart wallet outreach begins",
         ],
       },
@@ -268,14 +268,14 @@ export const offer: Offer = {
         points: [
           "Mario Nawfal post",
           "Roundtable post within 24 hours",
-          "Full KOL wave around the posts",
+          "Optional KOL activation wave, selected by SAAR",
         ],
       },
       {
         label: "Days 18 to 30",
         points: [
           "Sustain",
-          "Second KOL wave",
+          "Second batch of KOL intros",
           "Community growth",
           "Results report and next-phase plan",
         ],
@@ -299,7 +299,8 @@ export const offer: Offer = {
       kols: "KOLs",
       wallets: "Smart wallets",
     },
-    subtitle: "Minimum 50 creators. Sample below, full list shared on kickoff.",
+    subtitle:
+      "Intro-first structure. We can connect 50 to 200 KOLs, and SAAR decides who gets activated.",
     walletTableHeaders: {
       wallet: "Wallet or handle",
       knownFor: "Known for",
@@ -334,10 +335,10 @@ export const offer: Offer = {
     line: "Build the crowd first. List when the crowd is already there.",
     nameLine: "Alpay Aktuğ, Growth Lead, IBC",
     telegramLabel: "Telegram",
-    telegramUrl: "https://t.me/your_telegram",
+    telegramUrl: "https://t.me/Alpaycin0x",
     emailLabel: "Email",
     email: "alpay@ibc.agency",
     bookCallButtonLabel: "Book a call",
-    bookCallUrl: "https://t.me/your_telegram",
+    bookCallUrl: "https://t.me/Alpaycin0x",
   },
 };
