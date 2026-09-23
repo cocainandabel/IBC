@@ -1,0 +1,780 @@
+{
+  "programStart": "2026-06-17",
+  "asOf": "2026-09-23",
+  "defaultWeekId": "2026-09-21",
+  "weeks": [
+    {
+      "id": "2026-06-17",
+      "label": "Jun 17 – 23",
+      "range": "June 17 – 23, 2026",
+      "phase": "Phase 1 · Foundation",
+      "dayRange": "Days 0–6",
+      "kpis": [
+        { "label": "Program day", "value": "0–6", "sub": "Kickoff week" },
+        { "label": "Focus", "value": "Brand", "sub": "Institutional lock" },
+        { "label": "Status", "value": "Complete", "sub": "Foundation start" },
+        { "label": "Channels", "value": "Setup", "sub": "Pre-public" }
+      ],
+      "highlights": [
+        "GTM engagement started <strong>17 June 2026</strong> — Phase 1 Foundation (Days 0–30).",
+        "Began locking the institutional, compliance-first brand before any public activity.",
+        "Brand audit & guidelines review against site, deck, and channel assets.",
+        "Internal alignment on “receipts, not vibes” positioning."
+      ],
+      "activity": [
+        {
+          "title": "Brand foundation kickoff",
+          "status": "Complete",
+          "detail": "Lock institutional positioning before public activity; audit current assets."
+        },
+        {
+          "title": "Tone & voice rules",
+          "status": "Complete",
+          "detail": "No hashtags, no emojis, no em-dashes; standards cited by full name."
+        },
+        {
+          "title": "Do’s / don’ts one-pager",
+          "status": "Complete",
+          "detail": "LMCX Messaging Alignment for all content producers."
+        }
+      ],
+      "social": null,
+      "next": [
+        "Finalize visual identity cleanup (logo, color, typography).",
+        "Build branded templates across X, Discord, Telegram, quest platforms.",
+        "Write master narrative: verified methane avoidance, engineered for compliance."
+      ]
+    },
+    {
+      "id": "2026-06-24",
+      "label": "Jun 24 – 30",
+      "range": "June 24 – 30, 2026",
+      "phase": "Phase 1 · Foundation",
+      "dayRange": "Days 7–13",
+      "kpis": [
+        { "label": "Program day", "value": "7–13", "sub": "Brand lock" },
+        { "label": "Visual ID", "value": "Done", "sub": "Templates live" },
+        { "label": "Core message", "value": "1 CAT", "sub": "= 1 verified tCO2e" },
+        { "label": "X account", "value": "Prep", "sub": "Pre-launch hygiene" }
+      ],
+      "highlights": [
+        "Visual identity cleanup completed — logo, color, typography conventions locked.",
+        "Branded templates built for X, Discord, Telegram, Galxe, Zealy, TaskOn, and decks.",
+        "Verification-stack visuals created (ISO 14065, OGMP 2.0 L5, EPA Subpart W).",
+        "Core message locked: <strong>one CAT equals one verified tonne of CO2e avoided</strong>."
+      ],
+      "activity": [
+        {
+          "title": "Messaging framework",
+          "status": "Complete",
+          "detail": "Master narrative: verified methane avoidance, engineered for compliance."
+        },
+        {
+          "title": "Verification visual assets",
+          "status": "Complete",
+          "detail": "ISO 14065, OGMP 2.0 L5, EPA Subpart W stack graphics."
+        },
+        {
+          "title": "Channel templates",
+          "status": "Complete",
+          "detail": "X, Discord, Telegram, Galxe, Zealy, TaskOn, and deck templates."
+        }
+      ],
+      "social": null,
+      "next": [
+        "Stand up and optimize the official X account.",
+        "Hygiene check: remove non-relevant posts, update bio, pin intro thread.",
+        "Begin Discord and Telegram channel builds."
+      ]
+    },
+    {
+      "id": "2026-07-01",
+      "label": "Jul 1 – 7",
+      "range": "July 1 – 7, 2026",
+      "phase": "Phase 1 · Foundation",
+      "dayRange": "Days 14–20",
+      "kpis": [
+        { "label": "Program day", "value": "14–20", "sub": "Owned channels" },
+        { "label": "X setup", "value": "Complete", "sub": "Bio + pin + hygiene" },
+        { "label": "Publishing", "value": "Started", "sub": "Problem-led tests" },
+        { "label": "Discord", "value": "Building", "sub": "Server + roles" }
+      ],
+      "highlights": [
+        "Official X account optimized: 2FA, recovery, branded avatar/header, compliance-first bio.",
+        "Hygiene check completed — non-relevant posts removed; content buckets approved in Brand Platform.",
+        "Intro thread drafted and pinned (what it is, who it is for, why it matters).",
+        "X publishing period opens (report window <strong>1–22 July</strong>). Early signal: problem-led posts outperform product jargon."
+      ],
+      "activity": [
+        {
+          "title": "X account optimization",
+          "status": "Complete",
+          "detail": "Secure handle, 2FA, branded visuals, institutional bio + site link."
+        },
+        {
+          "title": "Pinned intro thread",
+          "status": "Complete",
+          "detail": "What / who / why — compliance-first framing."
+        },
+        {
+          "title": "Discord server setup",
+          "status": "Complete",
+          "detail": "Announcements, general, support, verification; roles and permissions."
+        }
+      ],
+      "social": {
+        "period": "Jul 1–22 window opened",
+        "posts": "Early week of 8-post cycle",
+        "insight": "Strongest response when content led with a real market problem."
+      },
+      "next": [
+        "Finish Discord bots, gating, and moderation playbook.",
+        "Launch Telegram announcement channel + community group.",
+        "Continue problem-led X cadence."
+      ]
+    },
+    {
+      "id": "2026-07-08",
+      "label": "Jul 8 – 14",
+      "range": "July 8 – 14, 2026",
+      "phase": "Phase 1 · Foundation",
+      "dayRange": "Days 21–27",
+      "kpis": [
+        { "label": "Program day", "value": "21–27", "sub": "Community rails" },
+        { "label": "Discord", "value": "Live", "sub": "discord.gg/DJHds3nk6H" },
+        { "label": "Telegram", "value": "Live", "sub": "t.me/LMCXcommunity" },
+        { "label": "Quests", "value": "Blocked", "sub": "Waiting on links" }
+      ],
+      "highlights": [
+        "Discord fully stood up: value channels, Collab.Land gating, MEE6 moderation, soft-launch then public open.",
+        "Telegram announcement channel + community group live with branded visuals, pins, and anti-spam bots.",
+        "Moderation guidelines and escalation playbook written; moderators onboarded.",
+        "Quest platforms (Galxe / Zealy / TaskOn) marked <strong>In Progress — waiting for links & funds</strong>."
+      ],
+      "activity": [
+        {
+          "title": "Discord launch",
+          "status": "Complete",
+          "detail": "https://discord.gg/DJHds3nk6H — gated institutional intake, verification docs."
+        },
+        {
+          "title": "Telegram launch",
+          "status": "Complete",
+          "detail": "https://t.me/LMCXcommunity — announcements + community group."
+        },
+        {
+          "title": "Quest platform setup",
+          "status": "In Progress",
+          "detail": "Galxe / Zealy / TaskOn — waiting for official links and funding."
+        }
+      ],
+      "social": {
+        "period": "Inside Jul 1–22 X window",
+        "posts": "Ongoing",
+        "insight": "Engagement quality highest on trust / problem-led framing."
+      },
+      "next": [
+        "Unblock quest links and fund education-first quest structure.",
+        "Start LMCX website build (planned 15 July).",
+        "Draft founder / thought-leadership outlines (first 4 weeks)."
+      ]
+    },
+    {
+      "id": "2026-07-15",
+      "label": "Jul 15 – 21",
+      "range": "July 15 – 21, 2026",
+      "phase": "Phase 1 → 2 transition",
+      "dayRange": "Days 28–34",
+      "kpis": [
+        { "label": "Program day", "value": "28–34", "sub": "Website + growth" },
+        { "label": "Website", "value": "Started", "sub": "15 Jul · ETA 31 Jul" },
+        { "label": "Content cal.", "value": "Jul 13–25", "sub": "Complete (Bobby)" },
+        { "label": "X posts (YTD)", "value": "Building", "sub": "Toward 8 in window" }
+      ],
+      "highlights": [
+        "Website development kicked off <strong>15 July</strong> (Next.js / TypeScript / Tailwind / Cloudflare R2). ETA 31 July.",
+        "Cinematic homepage structure: methane source → well closure → verification → CAT issuance → retirement.",
+        "Weekly content calendar for LinkedIn + X (<strong>13–25 July</strong>) completed and shared.",
+        "Phase 2 Growth & Activation workstreams opened: social scaling toward 25k followers @ Day 90."
+      ],
+      "activity": [
+        {
+          "title": "LMCX website build",
+          "status": "In Progress",
+          "detail": "Homepage scenes, Protocol wellbore log, Projects ledger, Retire flows, Documents vault."
+        },
+        {
+          "title": "Content calendar 13–25 Jul",
+          "status": "Complete",
+          "detail": "LinkedIn + X weekly plan — owner: Bobby."
+        },
+        {
+          "title": "Social media scaling",
+          "status": "In Progress",
+          "detail": "Daily/weekly cadence; engagement in compliance/ESG conversations."
+        }
+      ],
+      "social": {
+        "period": "Jul 1–22 reporting window",
+        "posts": "Mid-cycle",
+        "insight": "Best ER later measured at 20.5% on problem-led post."
+      },
+      "next": [
+        "Ship Protocol / Projects / Retire / Documents pages.",
+        "Prepare next content calendar (25–31 July) for approval by 23 July.",
+        "Continue KOL shortlisting (30 conversations in pipeline)."
+      ]
+    },
+    {
+      "id": "2026-07-22",
+      "label": "Jul 22 – 28",
+      "range": "July 22 – 28, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 35–41",
+      "kpis": [
+        { "label": "X posts", "value": "8", "sub": "Jul 1–22 window" },
+        { "label": "Best ER", "value": "20.5%", "sub": "117 imp · 24 eng" },
+        { "label": "Follower Δ", "value": "−6", "sub": "+6 / −12" },
+        { "label": "Website", "value": "Building", "sub": "ETA 31 Jul" }
+      ],
+      "highlights": [
+        "X performance closed for <strong>1–22 July</strong>: 8 posts published.",
+        "Best-performing post: <strong>117 impressions · 24 engagements · 20.5% ER</strong> (problem-led).",
+        "Highest reach: 132 impressions (weaker engagement quality).",
+        "Follower conversion gap identified as primary issue: +6 gained, −12 lost (net −6).",
+        "Website preview live at lmcx-seal-source.vercel.app (still in development)."
+      ],
+      "activity": [
+        {
+          "title": "Social media report",
+          "status": "Complete",
+          "detail": "What happened + what we do next — narrative, profile conversion, visuals."
+        },
+        {
+          "title": "Content calendar 25–31 Jul",
+          "status": "In Progress",
+          "detail": "Shared for approval ~23 July — owner: Bobby."
+        },
+        {
+          "title": "Website scenes + pages",
+          "status": "In Progress",
+          "detail": "R2 streaming, Protocol, Projects, Retire, Integrity, FAQ/SEO."
+        }
+      ],
+      "social": {
+        "period": "1–22 July 2026",
+        "posts": "8",
+        "best": "117 · 24 · 20.5%",
+        "reach": "132 impressions",
+        "followers": "+6 / −12 (net −6)",
+        "insight": "Problem-led beats product terminology. Retention is the gap."
+      },
+      "next": [
+        "Build around winning narrative: Market tension → Evidence → POV → Takeaway.",
+        "Improve bio + pinned post for profile conversion.",
+        "Introduce visual explainers (remediation→retirement, CAT vs MT, lifecycle)."
+      ]
+    },
+    {
+      "id": "2026-07-29",
+      "label": "Jul 29 – Aug 4",
+      "range": "July 29 – August 4, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 42–48",
+      "kpis": [
+        { "label": "Program day", "value": "42–48", "sub": "Growth sprint" },
+        { "label": "Website ETA", "value": "31 Jul", "sub": "Delivery target" },
+        { "label": "Content cal.", "value": "25–31 Jul", "sub": "In progress" },
+        { "label": "KOL pipeline", "value": "30", "sub": "Approved · TG" }
+      ],
+      "highlights": [
+        "Website delivery target week (31 July). Preview remains in development.",
+        "Content calendar for <strong>25–31 July</strong> in progress; Aug calendars queued.",
+        "KOL / influencer identification ongoing — 30 vetted conversations in pipeline (audience scored).",
+        "Quest, ambassador, and institutional partnership workstreams remain In Progress (funds/links TBD)."
+      ],
+      "activity": [
+        {
+          "title": "Website delivery push",
+          "status": "In Progress",
+          "detail": "Finalize cinematic journey, evidence vault, retirement certificates."
+        },
+        {
+          "title": "KOL vetting",
+          "status": "In Progress",
+          "detail": "Shortlist Tier 1 carbon/ESG/RWA/Solana voices; exclude low-trust accounts."
+        },
+        {
+          "title": "Aug content calendars",
+          "status": "Not Yet Started",
+          "detail": "1–7 Aug and 8–15 Aug calendars queued (Bobby)."
+        }
+      ],
+      "social": {
+        "period": "Post Jul 1–22 report",
+        "posts": "Narrative shift",
+        "insight": "Executing problem-led structure + profile conversion fixes."
+      },
+      "next": [
+        "Ship Aug 1–7 content calendar.",
+        "Advance 5 Tier 1 KOL activations with compliance-safe messaging.",
+        "Unblock Galxe / Zealy / TaskOn once links and funds arrive."
+      ]
+    },
+    {
+      "id": "2026-08-05",
+      "label": "Aug 5 – 11",
+      "range": "August 5 – 11, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 49–55",
+      "kpis": [
+        { "label": "As of", "value": "Aug 6", "sub": "Mid-week check" },
+        { "label": "Since start", "value": "51 days", "sub": "From Jun 17" },
+        { "label": "Phase 1", "value": "Done", "sub": "Brand + channels" },
+        { "label": "25k target", "value": "In prog.", "sub": "Due ~15 Aug (90d)" }
+      ],
+      "highlights": [
+        "Program day <strong>~51</strong> since kickoff (17 June).",
+        "Phase 1 Foundation substantially complete: brand, X, Discord, Telegram.",
+        "Phase 2 active: social scaling, quests, ambassadors, KOLs, listings, PR.",
+        "Follower target: grow X toward <strong>25,000 by ~Day 90 (15 Aug)</strong>."
+      ],
+      "activity": [
+        {
+          "title": "Social scaling to 25k",
+          "status": "In Progress",
+          "detail": "Consistent publishing + ESG/compliance engagement; double down on winning angles."
+        },
+        {
+          "title": "KOL activation",
+          "status": "In Progress",
+          "detail": "Finalize 5 Tier 1 KOLs; outreach, terms, compliance-safe deliverables."
+        },
+        {
+          "title": "Quests & ambassadors",
+          "status": "In Progress",
+          "detail": "Waiting on funds/links — education-first quests, then ambassador funnel."
+        }
+      ],
+      "social": {
+        "period": "Early Aug",
+        "posts": "Narrative + conversion focus",
+        "insight": "Setup week before Aug 6–12 growth spike."
+      },
+      "next": [
+        "Keep pressure on 25k follower path with problem-led + visual content.",
+        "Convert KOL shortlist into live placements; unblock quest stack."
+      ]
+    },
+    {
+      "id": "2026-08-06",
+      "label": "Aug 6 – 12",
+      "range": "August 6 – 12, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 50–56",
+      "kpis": [
+        { "label": "Impressions", "value": "443", "sub": "+116% vs prior 7d" },
+        { "label": "Eng. rate", "value": "12.8%", "sub": "+559% vs prior 7d" },
+        { "label": "Engagements", "value": "57", "sub": "+1,000% vs prior 7d" },
+        { "label": "Followers", "value": "223", "sub": "131 verified" }
+      ],
+      "highlights": [
+        "X analytics (Last 7 Days, as of <strong>12 August</strong>) show a clear growth week.",
+        "Impressions <strong>443 (+116%)</strong>, engagement rate <strong>12.8% (+559%)</strong>, engagements <strong>57 (+1,000%)</strong>.",
+        "Profile visits <strong>19 (+1,000%)</strong>, likes <strong>20 (+900%)</strong> — quality engagement lifted with volume.",
+        "Peaks around Aug 7 and Aug 9 on impressions; new follows concentrated early in the window.",
+        "Program day ~56 since kickoff (17 June → 12 August)."
+      ],
+      "activity": [
+        {
+          "title": "X growth week (Analytics)",
+          "status": "Complete",
+          "detail": "7-day window Aug 6–12: 443 impressions, 12.8% ER, 57 engagements, 19 profile visits, 20 likes, 1 repost."
+        },
+        {
+          "title": "Social scaling to 25k",
+          "status": "In Progress",
+          "detail": "Momentum week — double down on angles that drove ER and profile visits."
+        },
+        {
+          "title": "KOL + quests",
+          "status": "In Progress",
+          "detail": "Pipeline active; quest platforms still blocked on links/funds."
+        }
+      ],
+      "social": {
+        "period": "Last 7 days · Aug 6–12",
+        "followers": "131 / 223 verified",
+        "insight": "Strong WoW growth across impressions, ER, engagements, and profile visits. Keep problem-led posts and conversion-focused profile.",
+        "metrics": [
+          { "label": "Impressions", "value": "443", "delta": "+116%" },
+          { "label": "Engagement rate", "value": "12.8%", "delta": "+559%" },
+          { "label": "Engagements", "value": "57", "delta": "+1,000%" },
+          { "label": "Profile visits", "value": "19", "delta": "+1,000%" },
+          { "label": "Likes", "value": "20", "delta": "+900%" },
+          { "label": "Reposts", "value": "1", "delta": "" },
+          { "label": "Bookmarks", "value": "0", "delta": "" },
+          { "label": "Shares", "value": "0", "delta": "" }
+        ]
+      },
+      "next": [
+        "Extend this week’s winning content patterns into Aug 13–19.",
+        "Keep pressure on 25k follower path before the ~15 Aug Day-90 checkpoint.",
+        "Convert KOL shortlist into live placements; unblock quest stack."
+      ]
+    },
+    {
+      "id": "2026-08-13",
+      "label": "Aug 13 – 19",
+      "range": "August 13 – 19, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 57–63",
+      "kpis": [
+        { "label": "Followers", "value": "447", "sub": "+224 vs Aug 12" },
+        { "label": "Follower Δ", "value": "+100%", "sub": "223 → 447 in 7 days" },
+        { "label": "Focus", "value": "Ambassadors", "sub": "This week's work" },
+        { "label": "X", "value": "@lmcx_cat", "sub": "Public growth week" }
+      ],
+      "highlights": [
+        "Reporting week <strong>13–19 August</strong>. Work week opened <strong>Monday 17 August</strong>; snapshot as of <strong>Wednesday 19 August</strong>.",
+        "<a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a> followers jumped from <strong>223 (12 Aug)</strong> to <strong>447 (19 Aug)</strong>. That is <strong>+224 / +100%</strong> in one week.",
+        "Views lifted with the audience. The pinned community post sits at <strong>435 views</strong> on its own, roughly equal to the entire prior 7-day impression total (443).",
+        "Recent public posts are landing in the <strong>50–170+ view</strong> range per post (Aug 8–11 and the latest RWA thread), versus a week when the whole account did 443 impressions.",
+        "This week's operating focus is the <strong>ambassador program</strong>: design, recruitment, and Discord workflows on top of the new reach."
+      ],
+      "activity": [
+        {
+          "title": "X growth on @lmcx_cat",
+          "status": "Growth",
+          "detail": "Followers 223 → 447. Views up with the graph: pinned post 435 views; recent posts 56, 59, 117, 166 views. Account: 96 posts, 219 following."
+        },
+        {
+          "title": "Ambassador program",
+          "status": "In Progress",
+          "detail": "This week's work. Build the program: recruitment brief, Discord roles/workflows, compliance-safe talking points, and a first cohort funnel from the doubled audience."
+        },
+        {
+          "title": "KOL shortlist (Top 30)",
+          "status": "In Progress",
+          "detail": "Pipeline stays live. Ambassador track is the activation layer this week, not a replacement for Tier 1 KOL outreach."
+        }
+      ],
+      "social": {
+        "period": "Public snapshot · 19 Aug vs 12 Aug",
+        "followers": "447 (was 223)",
+        "insight": "Followers doubled in seven days. Views moved with them: one pinned post now matches last week's full impression count. Convert this reach into ambassadors, not only more posts.",
+        "metrics": [
+          { "label": "Followers", "value": "447", "delta": "+100%" },
+          { "label": "Net new", "value": "+224", "delta": "vs 12 Aug" },
+          { "label": "Pinned post views", "value": "435", "delta": "~prior 7d imp" },
+          { "label": "Latest post views", "value": "56", "delta": "last ~21h" },
+          { "label": "Aug 11 post", "value": "117", "delta": "views" },
+          { "label": "Aug 9 post", "value": "166", "delta": "views" },
+          { "label": "Posts on profile", "value": "96", "delta": "" },
+          { "label": "Following", "value": "219", "delta": "" }
+        ]
+      },
+      "next": [
+        "Ship the ambassador program this week: brief, Discord workflows, first cohort criteria.",
+        "Use the 447-follower graph for recruitment, not vanity. Invite the people already engaging.",
+        "Keep publishing the angles that drove views (issuance gates, measurement, RWA framing)."
+      ]
+    },
+    {
+      "id": "2026-08-23",
+      "label": "Aug 23 – 27",
+      "range": "August 23 – 27, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 67–71",
+      "kpis": [
+        { "label": "Followers", "value": "502", "sub": "+55 vs 19 Aug" },
+        { "label": "Since 12 Aug", "value": "+125%", "sub": "223 → 502" },
+        { "label": "Ambassadors", "value": "5", "sub": "Agreed · first cohort" },
+        { "label": "Top post", "value": "1.2K", "sub": "views · Aug 25" }
+      ],
+      "highlights": [
+        "Reporting window <strong>23–27 August</strong>, snapshot as of <strong>Thursday 27 August</strong>.",
+        "<a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a> kept climbing: <strong>447 (19 Aug) → 502 (27 Aug)</strong> (+55). From the 12 Aug baseline of 223 that is <strong>+279 / +125%</strong>.",
+        "Views kept rising with the graph. Pinned community post is at <strong>604 views</strong> (was 435 on 19 Aug). Aug 25 post hit <strong>1.2K views</strong>.",
+        "Ambassador track closed its first deals: <strong>KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi</strong> are agreed and sit in a dedicated Ambassadors section (not the Top 30 KOL list).",
+        "<strong>Galxe program publishes Monday</strong>. That unlocks the public quest layer for ambassador onboarding.",
+        "Same Monday: <strong>Discord invite task</strong> goes live. Invite bot is being built so members can enter and invite friends directly."
+      ],
+      "activity": [
+        {
+          "title": "X growth on @lmcx_cat",
+          "status": "Growth",
+          "detail": "Followers 447 → 502. Pinned 604 views. Aug 25 post 1.2K views. Account: 98 posts, 219 following."
+        },
+        {
+          "title": "Ambassador first cohort (agreed)",
+          "status": "Complete",
+          "detail": "KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi locked as ambassadors. Tracked separately from the Top 30 KOL shortlist."
+        },
+        {
+          "title": "Galxe program",
+          "status": "In Progress",
+          "detail": "Quest stack ready to publish Monday. First public layer for ambassador tasks and community education quests."
+        },
+        {
+          "title": "Discord invite task + bot",
+          "status": "In Progress",
+          "detail": "Invite bot in development. Monday launch: members enter the task and invite friends into Discord."
+        },
+        {
+          "title": "Ambassador onboarding rollout",
+          "status": "In Progress",
+          "detail": "3-step LMCX plan: launch program → onboard cohort via Galxe/Discord → weekly management + rewards."
+        }
+      ],
+      "social": {
+        "period": "Public snapshot · 27 Aug vs 19 Aug",
+        "followers": "502 (was 447)",
+        "insight": "Steady climb after the double week. Best single post this window: 1.2K views on Aug 25. Convert reach through the agreed ambassador cohort, Monday Galxe, and Discord invite bot.",
+        "metrics": [
+          { "label": "Followers", "value": "502", "delta": "+12%" },
+          { "label": "Net new", "value": "+55", "delta": "vs 19 Aug" },
+          { "label": "vs 12 Aug", "value": "+279", "delta": "+125%" },
+          { "label": "Pinned views", "value": "604", "delta": "+39%" },
+          { "label": "Aug 25 post", "value": "1.2K", "delta": "views" },
+          { "label": "Aug 18 post", "value": "101", "delta": "views" },
+          { "label": "Posts on profile", "value": "98", "delta": "" },
+          { "label": "Following", "value": "219", "delta": "" }
+        ]
+      },
+      "next": [
+        "Monday: publish Galxe and ship the Discord invite task (bot live so people can invite friends).",
+        "Point the five agreed ambassadors into first quests; run Discord roles, channels, guidelines.",
+        "Keep the content angles that are clearing 100–1.2K views (physical remediation → asset → access layer)."
+      ]
+    },
+    {
+      "id": "2026-08-31",
+      "label": "Aug 31 – Sep 2",
+      "range": "August 31 – September 2, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 75–77",
+      "kpis": [
+        { "label": "Discord", "value": "500", "sub": "members" },
+        { "label": "X followers", "value": "502", "sub": "holding · 27 Aug" },
+        { "label": "Ambassadors", "value": "5", "sub": "Going live this week" },
+        { "label": "Galxe", "value": "Page", "sub": "In build this week" }
+      ],
+      "highlights": [
+        "Short reporting window <strong>31 August – 2 September</strong>, snapshot as of <strong>Tuesday 2 September</strong>.",
+        "Discord crossed <strong>500 members</strong> on <a href=\"https://discord.gg/DJHds3nk6H\" target=\"_blank\" rel=\"noopener\">discord.gg/DJHds3nk6H</a>. Community rail is scaling alongside X.",
+        "This week's focus: <strong>share the ambassador cohort publicly</strong> (KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi) and <strong>finish the Galxe page</strong> for quests.",
+        "Invite bot and Discord invite task remain part of the Monday stack from last week; Galxe page is the other priority before full quest publish."
+      ],
+      "activity": [
+        {
+          "title": "Discord growth",
+          "status": "Growth",
+          "detail": "Server hit 500 members. Community intake + invite funnel starting to compound."
+        },
+        {
+          "title": "Ambassador cohort · public share",
+          "status": "In Progress",
+          "detail": "Five agreed ambassadors will be posted/shared this week across X, Discord, and Telegram."
+        },
+        {
+          "title": "Galxe page",
+          "status": "In Progress",
+          "detail": "Galxe program page being finalized this week. Sets up ambassador and education quests."
+        },
+        {
+          "title": "X @lmcx_cat",
+          "status": "Baseline",
+          "detail": "502 followers as of 27 Aug. No new public snapshot this window; content cadence continues."
+        }
+      ],
+      "social": {
+        "period": "Snapshot · 2 Sep",
+        "followers": "502 X · 500 Discord",
+        "insight": "Discord is the growth signal this window: 500 members. X holds at 502. Next conversion step is ambassador visibility + Galxe page live.",
+        "metrics": [
+          { "label": "Discord members", "value": "500", "delta": "milestone" },
+          { "label": "X followers", "value": "502", "delta": "27 Aug" },
+          { "label": "Ambassadors", "value": "5", "delta": "share this week" },
+          { "label": "Galxe page", "value": "Building", "delta": "this week" }
+        ]
+      },
+      "next": [
+        "Post/share the five ambassadors on owned channels.",
+        "Ship the Galxe page and wire first quests.",
+        "Keep Discord momentum past 500 with invite task + ambassador content."
+      ]
+    },
+    {
+      "id": "2026-09-03",
+      "label": "Sep 3 – 9",
+      "range": "September 3 – 9, 2026",
+      "phase": "Phase 2 · Growth",
+      "dayRange": "Days 78–84",
+      "changes": [
+        {
+          "label": "Discord members",
+          "from": "500",
+          "to": "2K",
+          "delta": "+300% · +1,500",
+          "note": "vs last week (2 Sep)"
+        },
+        {
+          "label": "X followers",
+          "to": "502",
+          "delta": "flat",
+          "flat": true,
+          "note": "unchanged vs last snapshot"
+        },
+        {
+          "label": "This week's focus",
+          "to": "Galxe + Ambassadors",
+          "delta": "shipping",
+          "flat": true,
+          "note": "page, quests, public cohort share"
+        }
+      ],
+      "kpis": [
+        {
+          "label": "Discord",
+          "value": "2K",
+          "from": "500",
+          "delta": "+300%",
+          "sub": "members · vs last week",
+          "featured": true
+        },
+        { "label": "X followers", "value": "502", "sub": "unchanged" },
+        { "label": "Ambassadors", "value": "5", "sub": "Ship this week" },
+        { "label": "Galxe", "value": "This week", "sub": "Page + quests" }
+      ],
+      "highlights": [
+        "Reporting week <strong>3–9 September</strong>, snapshot as of <strong>Wednesday 9 September</strong>.",
+        "Discord jumped from <strong>500 → 2,000 members</strong> (+1,500 / +300%) on <a href=\"https://discord.gg/DJHds3nk6H\" target=\"_blank\" rel=\"noopener\">discord.gg/DJHds3nk6H</a>. Clear community growth week.",
+        "X (<a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a>) holds at <strong>502 followers</strong>. No change vs last snapshot.",
+        "This week's delivery focus: <strong>close Galxe</strong> (page + quests) and <strong>ship the ambassador cohort</strong> (KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi) publicly."
+      ],
+      "activity": [
+        {
+          "title": "Discord growth",
+          "status": "Growth",
+          "detail": "500 → 2K members. Invite funnel and community intake compounding hard."
+        },
+        {
+          "title": "Galxe + ambassadors",
+          "status": "In Progress",
+          "detail": "This week's work: finish Galxe page/quests and publicly ship the five agreed ambassadors."
+        },
+        {
+          "title": "X @lmcx_cat",
+          "status": "Baseline",
+          "detail": "502 followers, unchanged. Content cadence continues while community growth sits on Discord."
+        }
+      ],
+      "social": {
+        "period": "Snapshot · 9 Sep",
+        "followers": "502 X · 2K Discord",
+        "insight": "Discord is the headline: 4× from 500 to 2K. X flat at 502. Convert community scale via Galxe + ambassador launch this week.",
+        "metrics": [
+          { "label": "Discord members", "value": "2K", "delta": "+300%" },
+          { "label": "Discord Δ", "value": "+1.5K", "delta": "vs 2 Sep" },
+          { "label": "X followers", "value": "502", "delta": "flat" },
+          { "label": "Ambassadors", "value": "5", "delta": "this week" },
+          { "label": "Galxe", "value": "In progress", "delta": "this week" }
+        ]
+      },
+      "next": [
+        "Ship Galxe page and first quests this week.",
+        "Publicly share the five ambassadors across X, Discord, and Telegram.",
+        "Keep Discord momentum past 2K with invite task + ambassador content."
+      ]
+    },
+    {
+      "id": "2026-09-21",
+      "label": "Sep 21 – 27",
+      "range": "September 21 – 27, 2026",
+      "phase": "Phase 2 · TaskOn Campaign Sprint",
+      "dayRange": "Days 96–102",
+      "current": true,
+      "changes": [
+        {
+          "label": "Campaign launch",
+          "to": "TaskOn live",
+          "delta": "started 21 Sep",
+          "flat": true,
+          "note": "weekly sprint opened Monday"
+        },
+        {
+          "label": "Engagement target",
+          "from": "current baseline",
+          "to": "10x",
+          "delta": "minimum goal"
+        },
+        {
+          "label": "Follower target",
+          "from": "current baseline",
+          "to": "10x",
+          "delta": "minimum goal"
+        },
+        {
+          "label": "Galxe status",
+          "to": "Waiting team",
+          "delta": "pending",
+          "flat": true,
+          "note": "team-side confirmation awaited"
+        }
+      ],
+      "kpis": [
+        { "label": "Campaign", "value": "TaskOn", "sub": "Live since 21 Sep" },
+        { "label": "Focus", "value": "KOL + Ambassadors", "sub": "Execution week" },
+        { "label": "Engagement goal", "value": "10x", "sub": "Minimum target" },
+        { "label": "Follower goal", "value": "10x", "sub": "Minimum target" }
+      ],
+      "highlights": [
+        "Reporting week <strong>21–27 September</strong>, snapshot as of <strong>Wednesday 23 September</strong>.",
+        "New weekly sprint started on <strong>Monday 21 September</strong> with a <strong>TaskOn campaign</strong> focused on activation and measurable growth.",
+        "This week we are running a focused KOL + ambassador campaign stack to push <strong>minimum 10x engagement</strong> and <strong>minimum 10x follower growth</strong> from current baselines.",
+        "<strong>Galxe</strong> lane is still waiting on team-side confirmation. We continue prep so activation can start immediately once greenlit.",
+        "Team tone for this week: execution-heavy, conversion-focused, and fast feedback loops — <strong>this is our week</strong>."
+      ],
+      "activity": [
+        {
+          "title": "TaskOn weekly campaign",
+          "status": "In Progress",
+          "detail": "Campaign launched 21 Sep. Tasks, flow and reporting opened for this week's sprint."
+        },
+        {
+          "title": "KOL campaign execution",
+          "status": "In Progress",
+          "detail": "Use approved influencer shortlist for reach + conversion posts tied to campaign tasks."
+        },
+        {
+          "title": "Ambassador program sync",
+          "status": "In Progress",
+          "detail": "Ambassador conversations continue this week; align posting cadence with TaskOn missions."
+        },
+        {
+          "title": "Galxe activation",
+          "status": "Blocked",
+          "detail": "Waiting for team-side confirmation. Assets and quest logic are prepared to launch immediately."
+        }
+      ],
+      "social": {
+        "period": "Week of Sep 21–27 · as of Sep 23",
+        "followers": "Execution sprint live",
+        "insight": "Priority is campaign execution over passive reporting: TaskOn + KOLs + ambassadors, with a minimum 10x engagement and 10x follower target for this week.",
+        "metrics": [
+          { "label": "TaskOn campaign", "value": "Live", "delta": "21 Sep" },
+          { "label": "Engagement target", "value": "10x", "delta": "minimum" },
+          { "label": "Follower target", "value": "10x", "delta": "minimum" },
+          { "label": "Galxe", "value": "Waiting team", "delta": "pending" },
+          { "label": "Ambassador sync", "value": "Active", "delta": "this week" }
+        ]
+      },
+      "next": [
+        "Publish daily TaskOn progress updates and close the week with conversion proof.",
+        "Activate selected influencers and ambassadors in synchronized waves to hit 10x targets.",
+        "Launch Galxe immediately after team confirmation and connect quests to the same weekly funnel."
+      ]
+    }
+  ]
+}
