@@ -1,0 +1,121 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1jdTPSOMU7Sv4MdoBNH21ObXlowqJcQlL91THKJ6sMik/edit?gid=0",
+  "asOf": "2026-09-23",
+  "summary": {
+    "phase1Complete": true,
+    "discord": "https://discord.gg/DJHds3nk6H",
+    "telegram": "https://t.me/LMCXcommunity",
+    "x": "https://x.com/lmcx_cat",
+    "websitePreview": "https://lmcx-seal-source.vercel.app/",
+    "followerTarget": "25,000 @ ~Day 90 (15 Aug 2026)"
+  },
+  "workstreams": [
+    {
+      "name": "Brand Foundation & Positioning",
+      "phase": "Phase 1",
+      "status": "Complete",
+      "items": [
+        "Brand audit & guidelines lock",
+        "Tone and voice rules",
+        "Do's / don'ts one-pager (LMCX Messaging Alignment)",
+        "Receipts-not-vibes internal alignment",
+        "Visual identity cleanup",
+        "Branded templates (X, Discord, Telegram, Galxe, Zealy, TaskOn, decks)",
+        "Verification-stack visuals (ISO 14065, OGMP 2.0 L5, EPA Subpart W)",
+        "Messaging framework + core CAT message"
+      ]
+    },
+    {
+      "name": "Social Media Setup (X)",
+      "phase": "Phase 1",
+      "status": "Complete",
+      "items": [
+        "Account secured (2FA, recovery)",
+        "Branded profile + header",
+        "Institutional bio + website link",
+        "Pinned intro thread",
+        "Hygiene check — removed non-relevant posts; content buckets in Brand Platform"
+      ]
+    },
+    {
+      "name": "Discord",
+      "phase": "Phase 1–2",
+      "status": "Growth",
+      "link": "https://discord.gg/DJHds3nk6H",
+      "items": [
+        "2,000 members (9 Sep 2026) · was 500 on 2 Sep",
+        "Server launch + gated intake + moderation live",
+        "Invite bot + Discord invite task (activation stack)",
+        "Roles, permissions, Collab.Land gating"
+      ]
+    },
+    {
+      "name": "Telegram",
+      "phase": "Phase 1",
+      "status": "Complete",
+      "link": "https://t.me/LMCXcommunity",
+      "items": [
+        "Announcement channel + community group",
+        "Branded visuals, pinned intro, rules",
+        "Anti-spam bots + moderator escalation"
+      ]
+    },
+    {
+      "name": "Quest Platforms (Galxe, Zealy, TaskOn)",
+      "phase": "Phase 1–2",
+      "status": "In Progress",
+      "blocker": "Galxe still waiting on team-side confirmation; TaskOn is already live this week",
+      "items": [
+        "TaskOn campaign live since 21 Sep",
+        "Galxe page + quests: launch right after team confirmation",
+        "Education-first quest structure + compliance review",
+        "Zealy & TaskOn mirror setup",
+        "Anti-farming rules across platforms"
+      ]
+    },
+    {
+      "name": "Weekly Content Calendars",
+      "phase": "Phase 1–2",
+      "status": "Mixed",
+      "items": [
+        "13–25 July — Complete (Bobby)",
+        "25–31 July — In Progress (approval ~23 Jul)",
+        "1–7 August — Not Yet Started (Bobby)",
+        "8–15 August — Not Yet Started (Bobby)"
+      ]
+    },
+    {
+      "name": "Social Media Scaling",
+      "phase": "Phase 2",
+      "status": "Growth",
+      "items": [
+        "@lmcx_cat 223 → 502 followers (12–27 Aug, +125%)",
+        "Pinned 604 views · Aug 25 post 1.2K views",
+        "Publish weekly + cross-engage",
+        "Track engagement; double down on best angles"
+      ]
+    },
+    {
+      "name": "Community, Ambassadors & KOLs",
+      "phase": "Phase 2",
+      "status": "In Progress",
+      "items": [
+        "First cohort AGREED: KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi",
+        "THIS WEEK (21–27 Sep): TaskOn campaign + KOL/ambassador execution",
+        "KOL identification & vetting (carbon, ESG, RWA, Solana) · Top 30 live (separate track)",
+        "Activate 5 Tier 1 KOLs with compliance-safe messaging"
+      ]
+    },
+    {
+      "name": "Institutional, Listings & PR",
+      "phase": "Phase 2",
+      "status": "In Progress",
+      "items": [
+        "Partnership pipeline (CBAM/CORSIA, corporates, treasuries)",
+        "Data listings (CryptoRank, CoinGecko, CoinMarketCap)",
+        "Solana / DEX partners (Orca, Meteora, Jupiter)",
+        "Earned media push (Bloomberg, CoinDesk, Cointelegraph, ESG press)"
+      ]
+    }
+  ]
+}

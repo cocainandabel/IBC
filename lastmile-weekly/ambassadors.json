@@ -1,0 +1,59 @@
+{
+  "asOf": "2026-09-23",
+  "sheet": "https://docs.google.com/spreadsheets/d/1JHc87gyDiZRbfMk_AUecO90VjSWOe-t_JYP_XD7Og9U/edit?gid=1747937101#gid=1747937101",
+  "note": "First cohort remains locked. This week (21–27 Sep) we run TaskOn + KOL sprint while Galxe is pending team confirmation. Discord: 2K members.",
+  "cohort": [
+    {
+      "handle": "@KongBTC",
+      "name": "KongBTC",
+      "x": "https://x.com/KongBTC",
+      "status": "Agreed",
+      "role": "Ambassador"
+    },
+    {
+      "handle": "@Onur",
+      "name": "Onur",
+      "x": "https://x.com/Onur",
+      "status": "Agreed",
+      "role": "Ambassador"
+    },
+    {
+      "handle": "@Snulet",
+      "name": "Snulet",
+      "x": "https://x.com/Snulet",
+      "status": "Agreed",
+      "role": "Ambassador"
+    },
+    {
+      "handle": "@FuryMetaa",
+      "name": "FuryMetaa",
+      "x": "https://x.com/FuryMetaa",
+      "status": "Agreed",
+      "role": "Ambassador"
+    },
+    {
+      "handle": "@SeniorDeFi",
+      "name": "SeniorDeFi",
+      "x": "https://x.com/SeniorDeFi",
+      "status": "Agreed",
+      "role": "Ambassador"
+    }
+  ],
+  "onboarding": [
+    {
+      "step": "01",
+      "title": "Launch the program",
+      "description": "Ship announcement copy for X, Discord, and Telegram. Stand up Discord trainee + ambassador roles and channels. Lock LMCX ambassador guidelines and a simple KPI tier. Keep TaskOn missions live this week; publish Galxe quests once team confirmation lands."
+    },
+    {
+      "step": "02",
+      "title": "Onboard the first cohort",
+      "description": "Bring in the agreed cohort (KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi). Send onboarding messages, assign Discord roles, and align posting cadence to this week's TaskOn campaign while Galxe launch is pending."
+    },
+    {
+      "step": "03",
+      "title": "Run the program weekly",
+      "description": "Keep a steady Galxe quest cadence. Update the ambassador spreadsheet every week with posts, reach, and Discord activity. Review monthly results against KPIs and distribute rewards to ambassadors who clear the bar."
+    }
+  ]
+}

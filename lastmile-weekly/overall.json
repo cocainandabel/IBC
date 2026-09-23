@@ -1,0 +1,127 @@
+{
+  "id": "overall",
+  "label": "Overall",
+  "range": "Overall · Jun 17 → Sep 23, 2026",
+  "phase": "Program rollup",
+  "dayRange": "Jun 17 → Sep 23 · Day ~98",
+  "asOf": "2026-09-23",
+  "changes": [
+    {
+      "label": "Discord members",
+      "from": "500",
+      "to": "2K",
+      "delta": "holding",
+      "note": "no new discord snapshot in this window"
+    },
+    {
+      "label": "X baseline",
+      "from": "502",
+      "to": "502",
+      "delta": "flat",
+      "note": "awaiting new measured jump"
+    },
+    {
+      "label": "This week's delivery",
+      "to": "TaskOn + KOL sprint",
+      "delta": "active",
+      "flat": true,
+      "note": "10x engagement + 10x follower target"
+    }
+  ],
+  "kpis": [
+    {
+      "label": "Discord",
+      "value": "TaskOn live",
+      "from": "21 Sep",
+      "delta": "Week sprint",
+      "sub": "campaign launched",
+      "featured": true
+    },
+    { "label": "Engagement goal", "value": "10x", "sub": "minimum this week" },
+    { "label": "Follower goal", "value": "10x", "sub": "minimum this week" },
+    { "label": "Galxe", "value": "Waiting team", "sub": "activation pending" }
+  ],
+  "highlights": [
+    "Program rollup as of <strong>23 September 2026</strong> (day ~98 since 17 June kickoff).",
+    "This week opened with a live <strong>TaskOn campaign</strong> on 21 September.",
+    "Operating target for this sprint: <strong>minimum 10x engagement</strong> and <strong>minimum 10x follower growth</strong> from baseline.",
+    "Ambassador + influencer execution is active this week; campaign ops are running daily with performance focus.",
+    "<strong>Galxe</strong> track is still waiting on team-side confirmation; launch prep remains ready."
+  ],
+  "activity": [
+    {
+      "title": "Brand, voice, and templates",
+      "status": "Complete",
+      "detail": "Institutional brand lock, tone rules, templates, verification visuals, core CAT message."
+    },
+    {
+      "title": "Owned channels",
+      "status": "Complete",
+      "detail": "X @lmcx_cat (502). Discord 2K members. Telegram t.me/LMCXcommunity."
+    },
+    {
+      "title": "TaskOn sprint",
+      "status": "In Progress",
+      "detail": "Weekly campaign started 21 Sep. Daily execution and conversion tracking are active."
+    },
+    {
+      "title": "KOL + ambassador execution",
+      "status": "In Progress",
+      "detail": "Use approved influencer and ambassador lanes to push the week's 10x targets."
+    },
+    {
+      "title": "Galxe activation",
+      "status": "Blocked",
+      "detail": "Waiting for team-side confirmation before launch; quest assets are ready."
+    }
+  ],
+  "social": {
+    "period": "Overall · 23 Sep snapshot",
+    "followers": "TaskOn sprint week",
+    "insight": "This week is execution-first: TaskOn + KOLs + ambassadors with a 10x engagement and 10x follower objective.",
+    "metrics": [
+      { "label": "TaskOn", "value": "Live", "delta": "21 Sep" },
+      { "label": "Engagement target", "value": "10x", "delta": "minimum" },
+      { "label": "Follower target", "value": "10x", "delta": "minimum" },
+      { "label": "Galxe", "value": "Waiting team", "delta": "pending" },
+      { "label": "Ambassador sync", "value": "Active", "delta": "this week" }
+    ]
+  },
+  "windows": {
+    "last7d": {
+      "label": "This window",
+      "range": "Sep 21 – 27",
+      "metrics": [
+        { "label": "TaskOn", "value": "Live", "delta": "21 Sep" },
+        { "label": "Engagement goal", "value": "10x", "delta": "minimum" },
+        { "label": "Follower goal", "value": "10x", "delta": "minimum" },
+        { "label": "Galxe", "value": "Waiting team", "delta": "pending" }
+      ]
+    },
+    "last4w": {
+      "label": "Last 4 weeks (analytics)",
+      "range": "Jul 16 – Aug 12",
+      "metrics": [
+        { "label": "Impressions", "value": "1.8K", "delta": "+135%" },
+        { "label": "Engagement rate", "value": "9.3%", "delta": "+162%" },
+        { "label": "Engagements", "value": "173", "delta": "+517%" },
+        { "label": "Profile visits", "value": "38", "delta": "+442%" }
+      ]
+    },
+    "last3m": {
+      "label": "Last 3 months (analytics)",
+      "range": "May 15 – Aug 12",
+      "metrics": [
+        { "label": "Impressions", "value": "6.9K", "delta": "−80%" },
+        { "label": "Engagement rate", "value": "6%", "delta": "−11%" },
+        { "label": "Engagements", "value": "418", "delta": "−82%" },
+        { "label": "Profile visits", "value": "125", "delta": "−84%" }
+      ]
+    }
+  },
+  "next": [
+    "Execute TaskOn campaign daily and publish weekly conversion proof.",
+    "Run coordinated KOL + ambassador activation to target 10x growth outcomes.",
+    "Launch Galxe immediately when team-side confirmation lands."
+  ]
+}
