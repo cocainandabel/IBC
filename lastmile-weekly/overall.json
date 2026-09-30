@@ -37,6 +37,14 @@
       "sub": "members · vs earlier baseline",
       "featured": true
     },
+    {
+      "label": "Twitter (X)",
+      "value": "Growing",
+      "from": "~500",
+      "delta": "momentum ↑",
+      "sub": "followers · this week",
+      "featured": true
+    },
     { "label": "Engagement goal", "value": "10x", "sub": "minimum this week" },
     { "label": "Follower goal", "value": "10x", "sub": "minimum this week" },
     { "label": "Galxe", "value": "Page writing", "sub": "launch prep in progress" }

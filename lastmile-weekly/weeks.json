@@ -821,6 +821,14 @@
           "sub": "members · vs earlier baseline",
           "featured": true
         },
+        {
+          "label": "Twitter (X)",
+          "value": "Growing",
+          "from": "~500",
+          "delta": "momentum ↑",
+          "sub": "followers · this week",
+          "featured": true
+        },
         { "label": "TaskOn", "value": "Live", "sub": "Campaign in execution (Twitter/X amplified)" },
         { "label": "Engagement goal", "value": "10x", "sub": "Minimum target this week" },
         { "label": "Follower goal", "value": "10x", "sub": "Minimum target this week" }
