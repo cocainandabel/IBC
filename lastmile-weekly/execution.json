@@ -1,6 +1,6 @@
 {
   "source": "https://docs.google.com/spreadsheets/d/1jdTPSOMU7Sv4MdoBNH21ObXlowqJcQlL91THKJ6sMik/edit?gid=0",
-  "asOf": "2026-09-23",
+  "asOf": "2026-09-30",
   "summary": {
     "phase1Complete": true,
     "discord": "https://discord.gg/DJHds3nk6H",
@@ -43,7 +43,7 @@
       "status": "Growth",
       "link": "https://discord.gg/DJHds3nk6H",
       "items": [
-        "2,000 members (9 Sep 2026) · was 500 on 2 Sep",
+        "3,000 members (30 Sep 2026) · was 2,000 on 9 Sep",
         "Server launch + gated intake + moderation live",
         "Invite bot + Discord invite task (activation stack)",
         "Roles, permissions, Collab.Land gating"
@@ -64,10 +64,10 @@
       "name": "Quest Platforms (Galxe, Zealy, TaskOn)",
       "phase": "Phase 1–2",
       "status": "In Progress",
-      "blocker": "Galxe still waiting on team-side confirmation; TaskOn is already live this week",
+      "blocker": "Galxe page/copy still being finalized this week; TaskOn is live and running",
       "items": [
-        "TaskOn campaign live since 21 Sep",
-        "Galxe page + quests: launch right after team confirmation",
+        "TaskOn campaign is live and in weekly execution",
+        "Galxe page writing in progress for launch",
         "Education-first quest structure + compliance review",
         "Zealy & TaskOn mirror setup",
         "Anti-farming rules across platforms"
@@ -101,7 +101,7 @@
       "status": "In Progress",
       "items": [
         "First cohort AGREED: KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi",
-        "THIS WEEK (21–27 Sep): TaskOn campaign + KOL/ambassador execution",
+        "THIS WEEK (28 Sep–4 Oct): TaskOn campaign + KOL/ambassador execution",
         "KOL identification & vetting (carbon, ESG, RWA, Solana) · Top 30 live (separate track)",
         "Activate 5 Tier 1 KOLs with compliance-safe messaging"
       ]
@@ -111,6 +111,7 @@
       "phase": "Phase 2",
       "status": "In Progress",
       "items": [
+        "Robinhood RWA explainer document writing in progress",
         "Partnership pipeline (CBAM/CORSIA, corporates, treasuries)",
         "Data listings (CryptoRank, CoinGecko, CoinMarketCap)",
         "Solana / DEX partners (Orca, Meteora, Jupiter)",

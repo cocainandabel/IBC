@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-09-23",
+  "asOf": "2026-09-30",
   "sheet": "https://docs.google.com/spreadsheets/d/1JHc87gyDiZRbfMk_AUecO90VjSWOe-t_JYP_XD7Og9U/edit?gid=1747937101#gid=1747937101",
-  "note": "First cohort remains locked. This week (21–27 Sep) we run TaskOn + KOL sprint while Galxe is pending team confirmation. Discord: 2K members.",
+  "note": "First cohort remains locked and ready. This week (28 Sep–4 Oct) TaskOn campaign is live, Galxe page writing is in progress, and Discord is now 3K members.",
   "cohort": [
     {
       "handle": "@KongBTC",
@@ -43,12 +43,12 @@
     {
       "step": "01",
       "title": "Launch the program",
-      "description": "Ship announcement copy for X, Discord, and Telegram. Stand up Discord trainee + ambassador roles and channels. Lock LMCX ambassador guidelines and a simple KPI tier. Keep TaskOn missions live this week; publish Galxe quests once team confirmation lands."
+      "description": "Ship announcement copy for X, Discord, and Telegram. Stand up Discord trainee + ambassador roles and channels. Lock LMCX ambassador guidelines and a simple KPI tier. Keep TaskOn missions running this week and finalize Galxe page copy for launch."
     },
     {
       "step": "02",
       "title": "Onboard the first cohort",
-      "description": "Bring in the agreed cohort (KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi). Send onboarding messages, assign Discord roles, and align posting cadence to this week's TaskOn campaign while Galxe launch is pending."
+      "description": "Bring in the agreed cohort (KongBTC, Onur, Snulet, FuryMetaa, SeniorDeFi). Send onboarding messages, assign Discord roles, and align posting cadence to this week's TaskOn campaign while Galxe page publication is being finalized."
     },
     {
       "step": "03",
