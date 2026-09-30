@@ -14,7 +14,7 @@
       "note": "vs earlier baseline"
     },
     {
-      "label": "X status",
+      "label": "Twitter (X) status",
       "to": "Growth accelerating",
       "delta": "upward",
       "flat": true,
@@ -44,6 +44,7 @@
   "highlights": [
     "Program rollup as of <strong>30 September 2026</strong> (day ~105 since 17 June kickoff).",
     "<strong>TaskOn campaign</strong> is live this week and running as the core activation engine.",
+    "<strong>Twitter (X)</strong> growth is accelerating this week from the previous ~500 baseline.",
     "<strong>Discord reached 3K members live</strong> (from 500 baseline) — strong social momentum.",
     "Ambassador lane is ready and synchronized with this week’s campaign execution.",
     "<strong>Galxe page writing is in progress</strong> and prepared for launch flow.",
@@ -59,7 +60,7 @@
     {
       "title": "Owned channels",
       "status": "Growth",
-      "detail": "X @lmcx_cat moved out of the ~500 baseline zone and is accelerating. Discord now 3K members live. Telegram remains active."
+      "detail": "Twitter (X) @lmcx_cat moved out of the ~500 baseline zone and is accelerating. Discord now 3K members live. Telegram remains active."
     },
     {
       "title": "TaskOn sprint",
@@ -84,11 +85,12 @@
   ],
   "social": {
     "period": "Overall · 30 Sep snapshot",
-    "followers": "X >500 and accelerating · Discord 3K",
-    "insight": "Execution week is active: TaskOn live, ambassadors ready, Galxe page writing, Robinhood RWA doc writing. Objective remains minimum 10x engagement and 10x follower growth.",
+    "followers": "Twitter (X) >500 and accelerating · Discord 3K",
+    "insight": "Execution week is active: TaskOn live, Twitter (X) growth accelerating, ambassadors ready, Galxe page writing, Robinhood RWA doc writing. Objective remains minimum 10x engagement and 10x follower growth.",
     "metrics": [
       { "label": "Discord", "value": "3K", "delta": "+500% vs 500 baseline" },
-      { "label": "X baseline", "value": "~500", "delta": "previous report" },
+      { "label": "Twitter (X) baseline", "value": "~500", "delta": "previous report" },
+      { "label": "Twitter (X) status", "value": "Growing", "delta": "this week" },
       { "label": "TaskOn", "value": "Live", "delta": "campaign week" },
       { "label": "Engagement target", "value": "10x", "delta": "minimum" },
       { "label": "Follower target", "value": "10x", "delta": "minimum" },
@@ -103,7 +105,8 @@
       "range": "Sep 28 – Oct 4",
       "metrics": [
         { "label": "Discord", "value": "3K", "delta": "+500%" },
-        { "label": "X baseline", "value": "~500", "delta": "previous report" },
+        { "label": "Twitter (X) baseline", "value": "~500", "delta": "previous report" },
+        { "label": "Twitter (X) status", "value": "Growing", "delta": "this week" },
         { "label": "TaskOn", "value": "Live", "delta": "running" },
         { "label": "Engagement goal", "value": "10x", "delta": "minimum" },
         { "label": "Follower goal", "value": "10x", "delta": "minimum" },
