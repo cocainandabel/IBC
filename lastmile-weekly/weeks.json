@@ -785,10 +785,10 @@
       "changes": [
         {
           "label": "Discord members",
-          "from": "2K",
+          "from": "500",
           "to": "3K",
-          "delta": "+50% · +1K",
-          "note": "live snapshot in this week"
+          "delta": "+500% · +2.5K",
+          "note": "vs earlier 500 baseline"
         },
         {
           "label": "TaskOn campaign",
@@ -816,9 +816,9 @@
         {
           "label": "Discord",
           "value": "3K",
-          "from": "2K",
-          "delta": "+50%",
-          "sub": "members · live week update",
+          "from": "500",
+          "delta": "+500%",
+          "sub": "members · vs earlier baseline",
           "featured": true
         },
         { "label": "TaskOn", "value": "Live", "sub": "Campaign in execution" },
@@ -827,7 +827,7 @@
       ],
       "highlights": [
         "Reporting week <strong>28 September – 4 October</strong>, snapshot as of <strong>Wednesday 30 September</strong>.",
-        "<a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a> side shows clear momentum this week; follower growth is visibly accelerating while campaign traffic increases.",
+        "<a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a> side shows clear momentum this week; we moved out of the ~500 baseline zone and growth is accelerating with campaign traffic.",
         "<strong>TaskOn campaign</strong> is now live and actively running for this week’s conversion sprint.",
         "<strong>Ambassador lane is ready</strong>; cohort coordination is prepared for synchronized campaign pushes.",
         "<strong>Galxe page is being written</strong> and prepared for publishing flow this week.",
@@ -868,10 +868,11 @@
       ],
       "social": {
         "period": "Week of Sep 28 – Oct 4 · as of Sep 30",
-        "followers": "X growth accelerating · Discord 3K",
+        "followers": "X >500 and accelerating · Discord 3K",
         "insight": "This week is an execution week: TaskOn live, ambassadors ready, Galxe page in build, and Robinhood RWA doc in progress. Minimum objective remains 10x engagement and 10x follower growth.",
         "metrics": [
-          { "label": "Discord members", "value": "3K", "delta": "+50% vs 2K" },
+          { "label": "Discord members", "value": "3K", "delta": "+500% vs 500 baseline" },
+          { "label": "X baseline", "value": "~500", "delta": "previous report" },
           { "label": "TaskOn campaign", "value": "Live", "delta": "running" },
           { "label": "Ambassador lane", "value": "Ready", "delta": "activation" },
           { "label": "Galxe page", "value": "Writing", "delta": "in build" },
