@@ -1,0 +1,150 @@
+{
+  "id": "overall",
+  "label": "Overall",
+  "range": "Overall · Jun 17 → Sep 30, 2026",
+  "phase": "Program rollup",
+  "dayRange": "Jun 17 → Sep 30 · Day ~105",
+  "asOf": "2026-09-30",
+  "changes": [
+    {
+      "label": "Discord members",
+      "from": "500",
+      "to": "3K",
+      "delta": "+500% · +2.5K",
+      "note": "vs earlier baseline"
+    },
+    {
+      "label": "Twitter (X) followers",
+      "from": "530",
+      "to": "3.1K",
+      "delta": "+485% · +2.57K",
+      "note": "live week update"
+    },
+    {
+      "label": "This week's delivery",
+      "to": "TaskOn + Ambassadors + RWA doc",
+      "delta": "active",
+      "flat": true,
+      "note": "Galxe page writing in progress"
+    }
+  ],
+  "kpis": [
+    {
+      "label": "Discord",
+      "value": "3K",
+      "from": "500",
+      "delta": "+500%",
+      "sub": "members · vs earlier baseline",
+      "featured": true
+    },
+    {
+      "label": "Twitter (X)",
+      "value": "3.1K",
+      "from": "530",
+      "delta": "+485%",
+      "sub": "followers · this week",
+      "featured": true
+    },
+    { "label": "Engagement goal", "value": "10x", "sub": "minimum this week" },
+    { "label": "Follower goal", "value": "10x", "sub": "minimum this week" },
+    { "label": "Galxe", "value": "Page writing", "sub": "launch prep in progress" }
+  ],
+  "highlights": [
+    "Program rollup as of <strong>30 September 2026</strong> (day ~105 since 17 June kickoff).",
+    "<strong>TaskOn campaign</strong> is live this week and running as the core activation engine.",
+    "<strong>Twitter (X)</strong> followers jumped from <strong>530 → 3.1K</strong> this week (+485%, +2.57K).",
+    "<strong>Discord reached 3K members live</strong> (from 500 baseline) — strong social momentum.",
+    "Ambassador lane is ready and synchronized with this week’s campaign execution.",
+    "<strong>Galxe page writing is in progress</strong> and prepared for launch flow.",
+    "<strong>Robinhood RWA explainer doc</strong> is being written as a strategic narrative asset.",
+    "Operating target remains: <strong>minimum 10x engagement</strong> and <strong>minimum 10x follower growth</strong>."
+  ],
+  "activity": [
+    {
+      "title": "Brand, voice, and templates",
+      "status": "Complete",
+      "detail": "Institutional brand lock, tone rules, templates, verification visuals, core CAT message."
+    },
+    {
+      "title": "Owned channels",
+      "status": "Growth",
+      "detail": "Twitter (X) @lmcx_cat moved from 530 to 3.1K followers this week. Discord now 3K members live. Telegram remains active."
+    },
+    {
+      "title": "TaskOn sprint",
+      "status": "In Progress",
+      "detail": "Weekly campaign is live and running. Daily execution and conversion tracking are active."
+    },
+    {
+      "title": "KOL + ambassador execution",
+      "status": "In Progress",
+      "detail": "Influencer + ambassador lanes are synchronized to push this week's 10x targets."
+    },
+    {
+      "title": "Galxe page",
+      "status": "In Progress",
+      "detail": "Page copy and launch structure are being written/prepared this week."
+    },
+    {
+      "title": "Robinhood RWA explainer doc",
+      "status": "In Progress",
+      "detail": "Narrative document is being written for campaign messaging and credibility framing."
+    }
+  ],
+  "social": {
+    "period": "Overall · 30 Sep snapshot",
+    "followers": "Twitter (X) 3.1K (from 530) · Discord 3K",
+    "insight": "Execution week is active: TaskOn live, Twitter (X) followers scaled 530 → 3.1K, ambassadors ready, Galxe page writing, Robinhood RWA doc writing. Objective remains minimum 10x engagement and 10x follower growth.",
+    "metrics": [
+      { "label": "Discord", "value": "3K", "delta": "+500% vs 500 baseline" },
+      { "label": "Twitter (X) followers", "value": "3.1K", "delta": "+485% vs 530" },
+      { "label": "TaskOn", "value": "Live", "delta": "campaign week" },
+      { "label": "Engagement target", "value": "10x", "delta": "minimum" },
+      { "label": "Follower target", "value": "10x", "delta": "minimum" },
+      { "label": "Ambassadors", "value": "Ready", "delta": "activation" },
+      { "label": "Galxe", "value": "Page writing", "delta": "in progress" },
+      { "label": "Robinhood RWA doc", "value": "Writing", "delta": "in progress" }
+    ]
+  },
+  "windows": {
+    "last7d": {
+      "label": "This window",
+      "range": "Sep 28 – Oct 4",
+      "metrics": [
+        { "label": "Discord", "value": "3K", "delta": "+500%" },
+        { "label": "Twitter (X) followers", "value": "3.1K", "delta": "+485%" },
+        { "label": "TaskOn", "value": "Live", "delta": "running" },
+        { "label": "Engagement goal", "value": "10x", "delta": "minimum" },
+        { "label": "Follower goal", "value": "10x", "delta": "minimum" },
+        { "label": "Ambassadors", "value": "Ready", "delta": "active" },
+        { "label": "Galxe", "value": "Page writing", "delta": "in progress" }
+      ]
+    },
+    "last4w": {
+      "label": "Last 4 weeks (analytics)",
+      "range": "Jul 16 – Aug 12",
+      "metrics": [
+        { "label": "Impressions", "value": "1.8K", "delta": "+135%" },
+        { "label": "Engagement rate", "value": "9.3%", "delta": "+162%" },
+        { "label": "Engagements", "value": "173", "delta": "+517%" },
+        { "label": "Profile visits", "value": "38", "delta": "+442%" }
+      ]
+    },
+    "last3m": {
+      "label": "Last 3 months (analytics)",
+      "range": "May 15 – Aug 12",
+      "metrics": [
+        { "label": "Impressions", "value": "6.9K", "delta": "−80%" },
+        { "label": "Engagement rate", "value": "6%", "delta": "−11%" },
+        { "label": "Engagements", "value": "418", "delta": "−82%" },
+        { "label": "Profile visits", "value": "125", "delta": "−84%" }
+      ]
+    }
+  },
+  "next": [
+    "Execute TaskOn campaign daily and publish end-of-week conversion proof.",
+    "Run coordinated KOL + ambassador activation waves for 10x outcomes.",
+    "Finalize and publish Galxe page this week.",
+    "Complete Robinhood RWA explainer and repurpose it across channels."
+  ]
+}
