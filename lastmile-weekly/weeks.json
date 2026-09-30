@@ -805,6 +805,13 @@
           "note": "cohort prepared for weekly sprint"
         },
         {
+          "label": "Twitter (X) followers",
+          "from": "530",
+          "to": "3.1K",
+          "delta": "+485% · +2.57K",
+          "note": "live week update"
+        },
+        {
           "label": "Galxe status",
           "to": "Page writing",
           "delta": "in build",
@@ -823,9 +830,9 @@
         },
         {
           "label": "Twitter (X)",
-          "value": "Growing",
-          "from": "~500",
-          "delta": "momentum ↑",
+          "value": "3.1K",
+          "from": "530",
+          "delta": "+485%",
           "sub": "followers · this week",
           "featured": true
         },
@@ -835,7 +842,7 @@
       ],
       "highlights": [
         "Reporting week <strong>28 September – 4 October</strong>, snapshot as of <strong>Wednesday 30 September</strong>.",
-        "On <strong>Twitter (X)</strong>, <a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a> shows clear momentum this week; we moved out of the ~500 baseline zone and growth is accelerating with campaign traffic.",
+        "On <strong>Twitter (X)</strong>, <a href=\"https://x.com/lmcx_cat\" target=\"_blank\" rel=\"noopener\">@lmcx_cat</a> jumped from <strong>530 → 3.1K followers</strong> this week (+485%, +2.57K).",
         "<strong>TaskOn campaign</strong> is now live and actively running for this week’s conversion sprint.",
         "<strong>Ambassador lane is ready</strong>; cohort coordination is prepared for synchronized campaign pushes.",
         "<strong>Galxe page is being written</strong> and prepared for publishing flow this week.",
@@ -851,7 +858,7 @@
         {
           "title": "Twitter (X) growth acceleration",
           "status": "Growth",
-          "detail": "Follower graph is rising this week on Twitter (X). Content is aligned to conversion-first campaign objectives."
+          "detail": "Twitter (X) followers moved from 530 to 3.1K this week. Content is aligned to conversion-first campaign objectives."
         },
         {
           "title": "Ambassador rollout",
@@ -876,12 +883,11 @@
       ],
       "social": {
         "period": "Week of Sep 28 – Oct 4 · as of Sep 30",
-        "followers": "Twitter (X) >500 and accelerating · Discord 3K",
-        "insight": "This week is an execution week: TaskOn live, Twitter (X) growth accelerating, ambassadors ready, Galxe page in build, and Robinhood RWA doc in progress. Minimum objective remains 10x engagement and 10x follower growth.",
+        "followers": "Twitter (X) 3.1K (from 530) · Discord 3K",
+        "insight": "This week is an execution week: TaskOn live, Twitter (X) followers scaled 530 → 3.1K, ambassadors ready, Galxe page in build, and Robinhood RWA doc in progress. Minimum objective remains 10x engagement and 10x follower growth.",
         "metrics": [
           { "label": "Discord members", "value": "3K", "delta": "+500% vs 500 baseline" },
-          { "label": "Twitter (X) baseline", "value": "~500", "delta": "previous report" },
-          { "label": "Twitter (X) status", "value": "Growing", "delta": "this week" },
+          { "label": "Twitter (X) followers", "value": "3.1K", "delta": "+485% vs 530" },
           { "label": "TaskOn campaign", "value": "Live", "delta": "running" },
           { "label": "Ambassador lane", "value": "Ready", "delta": "activation" },
           { "label": "Galxe page", "value": "Writing", "delta": "in build" },
